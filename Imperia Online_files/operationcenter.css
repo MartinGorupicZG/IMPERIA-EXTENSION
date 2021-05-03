@@ -1,0 +1,1536 @@
+/* SIMULATOR 2.0 */
+.simulator-wrap {
+    width: 810px;
+    padding: 20px 0px;
+    color: #4A2F16;
+}
+.simulator-wrap a { color: #33210F; }
+    .simulator-holder {
+        position: relative;
+        margin-bottom: 40px;
+        background: transparent url("../gui/simulator/bg_content.png?v2") repeat-y right top;
+    }
+        .simulator-in {
+            position: relative;
+                top: -19px;
+            background: transparent url("../gui/simulator/bg_top.png?v2") no-repeat right top;
+        }
+        .simulator-bottom {
+            position: relative;
+                bottom: -30px;
+            min-height: 346px;
+            padding: 0px 2px 0px 6px;
+            
+            background: transparent url("../gui/simulator/bg_bottom.png?v2") no-repeat right bottom;
+        }
+table.simulator-header {
+    position: relative;
+        top: -16px;
+    width: 100%;
+    height: 120px;
+}
+.attacker { background: transparent url("../gui/simulator/bg_attacker.png?v2") no-repeat center center; }
+.defender { background: transparent url("../gui/simulator/bg_defender.png?v2") no-repeat center center; }
+    .simulator-avatar { width: 150px; }
+        .simulator-avatar a {
+            display: block;
+            width: 102px;
+            height: 102px;
+            margin: 0px auto;
+            padding: 7px;
+            background: transparent url("../gui/simulator/bg_avatar.png?v2") no-repeat left top;
+        }
+    .simulator-user {
+        width: 180px;
+        color: #33210F;
+    }
+        .simulator-user h3 {
+            margin: 0px;
+            padding: 0px;
+            color: #9E0719;
+        }
+        .defender .simulator-user h3 { color: #39640C; }
+        .simulator-user div { margin-bottom: 8px; }
+        .simulator-user a {
+            text-decoration: none;
+            border-bottom: 1px dotted #33210F;
+            direction: ltr;
+            unicode-bidi: bidi-override;
+        }
+        .simulator-user a:hover { border-bottom: 1px solid #33210F; }
+    .simulator-order {
+        padding: 5px 15px 5px 0px;
+        text-align: right;
+    }
+.simulator-tabs {
+    position: absolute;
+        top: 76px;
+        right: 20px;
+    width: 232px;
+    height: 32px;
+    line-height: 28px;
+    text-align: center;
+}
+    .simulator-tabs a {
+        display: block;
+        float: left;
+        width: 116px;
+        height: 31px;
+        text-decoration: none;
+        background: url("../gui/simulator/bg_simulator_tab.png?v2") no-repeat;
+        outline: none;
+    }
+    .simulator-tabs a.simulator-tab-first { background-position: left -31px; }
+    .simulator-tabs a.simulator-tab-first.active { background-position: left top; }
+    .simulator-tabs a.simulator-tab-last { background-position: right -31px; }
+    .simulator-tabs a.simulator-tab-last.active { background-position: right top; }
+
+.simulator-army {
+    width: 792px;
+    height: 79px;
+    padding-left: 10px;
+    border-bottom: 1px solid #F4E5C6;
+}
+    .simulator-army-row {
+        float: left;
+        height: 48px;
+        padding: 0px 4px 4px 3px;
+    }
+        .army-shadow {
+            float: left;
+            width: 40px;
+            height: 44px;
+            padding: 2px 5px 2px 3px;
+            background: url("../gui/simulator/bg_army_header.png?v2") no-repeat left top;
+        }
+        .simulator-army-in {
+            float: left;
+            width: 40px;
+            height: 44px;
+            margin-left: -3px;
+            padding: 2px 5px 2px 3px;
+            background: url("../gui/simulator/bg_army_header.png?v2") no-repeat left top;
+        }
+            .army-shadow a,
+            .simulator-army-in a { border: none;}
+        .simulator-army-in.sim-inactive {
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+            background: url("../gui/simulator/bg_army_header.png?v2") no-repeat -47px top;
+        }
+    .simulator-army-show { line-height: 16px; }
+    .simulator-army-show a:hover { text-decoration: none; }
+.simulator-army-holder {
+    padding: 10px 0px;
+    border-top: 1px solid #B0A794;
+}
+.simulator-parameters-holder {
+    width: 680px;
+    line-height: 96px;
+    margin: 0px auto 20px;
+    padding: 0px;
+}
+    .simulator-army-holder-in {
+        width: 680px;
+        min-height: 96px;
+        line-height: 96px;
+        margin: 0px auto;
+        background: url("../gui/simulator/bg_army_holder_off.png?v2");
+    }
+        .simulator-unit-holder,
+        .simulator-parameters-small,
+        .simulator-parameters-large,
+        .simulator-parameters-huge {
+            float: left;
+            width: 80px;
+            height: 96px;
+            line-height: 18px;
+            margin-left: 5px;
+            background: url("../gui/simulator/bg_army_holder.png?v2") no-repeat -90px 0px;
+        }
+        .simulator-unit-holder { display: none; } 
+        .simulator-parameters-holder .simulator-unit-holder { display: block; }
+        .simulator-parameters-small {
+            background-position: -173px -125px;
+        }
+        .simulator-parameters-large {
+            width: 165px;
+            background-position: -88px -125px;
+        }
+        .simulator-parameters-huge {
+            width: 250px;
+            background-position: -3px -125px;
+        }
+        .simulator-army-holder-in .sim-open {
+            width: 165px;
+            background-position: -3px 0px;
+        }
+            .simulator-unit-head {
+                float: left;
+                    margin-left: -5px;
+                width: 5px;
+                height: 96px;
+                background: url("../gui/simulator/bg_army_holder.png?v2") no-repeat 0px -125px;
+            }
+            a.simulator-unit-close {
+                float: right;
+                display: block;
+                width: 23px;
+                height: 22px;
+                background: url("../gui/simulator/bg_army_holder.png?v2") no-repeat -144px -100px;
+            }
+            .simulator-unit-image {
+                margin: 10px 0px 0px 14px;
+                width: 40px;
+                height: 40px;
+            }
+            .simulator-parameters-small .simulator-unit-image,
+            .simulator-parameters-large .simulator-unit-image,
+            .simulator-parameters-huge .simulator-unit-image {
+                margin-top: 8px;
+                padding: 2px 5px 5px 2px;
+                background: url("../gui/simulator/bg_army_holder.png?v2") no-repeat -200px 0px;
+            }
+                .simulator-parameters-large .simulator-unit-image { margin-left: 60px; }
+                .simulator-parameters-huge .simulator-unit-image { margin-left: 102px; }
+            .simulator-unit-holder input {
+                display: inline-block;
+                float: left;
+                margin: 9px 0px 0px 4px;
+                width: 60px;
+                height: 18px;
+                line-height: 18px;
+                font-size: 12px;
+                text-align: right;
+                background: #FFF;
+                outline: none;
+                border: none;
+            }
+            .simulator-unit-holder input.sim-castle {
+                display: none;
+                width: 57px;
+                margin: 9px 0px 0px 27px;
+            }
+            .simulator-unit-holder.sim-open input.sim-castle {
+                display: block;
+                display: inline-block;
+            }
+                .simulator-unit-image a { border: none; }
+                .simulator-parameter-image a { border: none; }
+            a.simulator-unit-expand {
+                position: relative;
+                display: block;
+                float: right;
+                width: 10px;
+                height: 16px;
+                    margin: -20px 10px 0px 0px;
+                background: url("../gui/simulator/bg_army_holder.png?v2") no-repeat -3px -103px;
+            }
+            .sim-open a.simulator-unit-expand { background-position: -27px -103px; }
+            #simulator-army-top a.simulator-unit-expand { display: none; }
+            .simulator-parameters-holder .custom-select {
+                position: static;
+                margin: 0px 0px 0px 1px;
+            }
+                .simulator-parameters-holder .custom-select ul {
+                        top: auto;
+                        left: auto;
+                    margin-top: -2px;
+                }
+            .simulator-parameters-small .custom-select { width: 66px; }
+            .simulator-parameters-small .custom-select ul { width: 60px; }
+            .simulator-parameters-large .custom-select { width: 153px; }
+            .simulator-parameters-large .custom-select ul { width: 147px; }
+            .simulator-parameters-huge .custom-select { width: 233px; }
+            .simulator-parameters-huge .custom-select ul { width: 227px; }
+            .simulator-parameters-holder .custom-check-box {
+                float: left;
+                margin: 0px 0px 0px 26px;
+            }
+    .sim-ico {
+        display: block;
+        width: 38px;
+        height: 38px;
+        margin: 1px;
+        background: url("../gui/simulator/bg_simulator_icons.png?v2") no-repeat;
+    }
+    .sim-ico.strelci { background-position: -148px -74px; }
+    .sim-ico.mele { background-position: -185px -37px; }
+    .sim-ico.broni { background-position: -111px -74px; }
+    .sim-ico.vmed { background-position: -37px -74px; }
+    .sim-ico.trenches { background-position: 0px 0px; }
+    .sim-ico.moral { background-position: -111px 0px; }
+    .sim-ico.capitol { background-position: 0px -37px; }
+    .sim-ico.prem { background-position: -111px -37px; }
+    .sim-ico.formation { background-position: -185px 0px; }
+    .sim-ico.fort { background-position: 0px -74px; }
+    .sim-ico.field_fort { background-position: -222px 0px; }
+    .sim-ico.trenches { background-position: -185px -74px; }
+    .sim-ico.towers { background-position: -74px -74px; }
+    .sim-ico.relef { background-position: -37px 0px; }
+    .sim-ico.vid_krepost { background-position: -37px -37px; }
+    .sim-ico.attack_penalty { background-position: 0px 0px; }
+    .sim-ico.bonus_kone { background-position: -148px -37px; }
+    .sim-ico.bonus_pehota { background-position: -148px 0px; }
+    .sim-ico.bonus_strelci { background-position: -74px -37px; }
+    .sim-ico.bonus_walls { background-position: -74px 0px; }
+    .sim-ico.krepost { background: url("../gui/simulator/bg_army_holder.png?v2") no-repeat -105px -11px; }
+        .simulator-parameters-holder .sim-ico {
+            cursor: default;
+        }
+.simulator-info {
+    width: 680px;
+    margin: 10px auto;
+    line-height: 34px;
+}
+    .simulator-info td {
+        white-space: nowrap;
+    }
+    .simulator-info a {
+        display: block;
+        width: 35px;
+        height: 34px;
+    }
+    .cart, .total-resources { background: url("../gui/simulator/cart_s.png?v2") no-repeat 100% 50%; }
+    .pillage { background: url("../gui/simulator/pillage.png?v2") no-repeat 0 5px; }
+    #simulator-army-bottom .cart,
+    #simulator-army-bottom .pillage { display: none; }
+    #simulator-army-top .total-resources { display: none; }
+    .simulator-info a.sim-remove { background: url("../gui/simulator/small_buttons.png?v2") no-repeat left top; }
+    .simulator-info a.sim-clear { background: url("../gui/simulator/small_buttons.png?v2") no-repeat right top; }
+
+.simulator-swap {
+    width: 196px;
+    margin: 10px auto 40px;
+}
+.simulator-footer {
+    margin: 10px auto;
+}
+    .simulator-footer td {
+        padding: 5px;
+    }
+.simulator-result {
+    margin: 0px 2px 0px 6px;
+    padding: 20px 0px;
+}
+    .simulator-result table.round-wrap {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        background: #E3D6C1;
+    }
+        .simulator-result th {
+            height: 30px;
+            line-height: 30px;
+            padding: 0px 5px;
+            color: #4A2F16;
+            font-size: 12px;
+            font-weight: bold;
+            border-left: 1px solid #BDA984;
+            border-bottom: 1px solid #352319;
+        }
+        .simulator-result tr th:first-child { border-left: none; }
+        .simulator-result td {
+            padding: 2px 5px 3px;
+            color: #80694E;
+            border-left: 1px solid #BDA984;
+            border-bottom: 1px solid #BDA984;
+        }
+        .simulator-result .result-row1 td { background: #D7C8AA; }
+        .simulator-result tr td:first-child { border-left: none; }
+        .simulator-result a { color: #4A2F16; }
+        .simulator-result td.numeral { direction: ltr; } 
+.large-button {
+    display: inline-block;
+    width: 196px;
+    height: 28px;
+    line-height: 28px;
+    color: #4A2F16;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: url("../gui/simulator/large_button.png?v2") no-repeat left top;
+    border: none;
+}
+.big-button,
+a.big-button {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 6px;
+    margin: 0px 2px 10px;
+    color: #4A2F16;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    background: url("../gui/simulator/big_button.png?v2") repeat-x center center;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #C4BCAB;
+        -moz-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.65);
+        -webkit-box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.65);
+    box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.65);
+}
+.simulator-wrap a.not-link {
+    border-bottom: none;
+    cursor: default;
+}
+/* SIMULATOR 2.0 END */
+
+/* === OPERATION CENTER 2.0 === */
+/* === ICONS === */
+.icon-op {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: url("../gui/icons-sprite-spy.png") no-repeat;
+}
+.icon-op.inactive {
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+th .icon-op {
+    display: block;
+    margin: 5px auto;
+}
+.icon-op.icon-player        { background-position: 0px 0px; }
+.icon-op.icon-player-small  { background-position: -100px -75px; }
+.icon-op.icon-ranking       { background-position: -25px 0px; }
+.icon-op.icon-population    { background-position: -50px 0px; }
+.icon-op.icon-population-small { background-position: -50px -75px; }
+.icon-op.icon-distance      { background-position: -75px 0px; }
+.icon-op.icon-points        { background-position: -100px 0px; }
+.icon-op.icon-action        { background-position: -125px 0px; }
+.icon-op.icon-action-small  { background-position: -75px -75px; }
+.icon-op.icon-options       { background-position: -175px -100px; }
+.icon-op.icon-spy           { background-position: -150px 0px; }
+.icon-op.icon-time          { background-position: -175px 0px; }
+.icon-op.icon-time-gold     { background-position: -25px -125px; }
+
+.icon-op.icon-infiltre         { background-position: 0px -25px; }
+.icon-op.icon-infiltre-all     { background-position: -25px -25px; }
+.icon-op.icon-retreat          { background-position: -50px -25px; }
+.icon-op.icon-retreat-all      { background-position: -150px -50px; }
+.icon-op.icon-infiltre-capitol { background-position: -75px -25px; }
+.icon-op.icon-name      { background-position: -100px -25px; }
+.icon-op.icon-name-all  { background-position: -175px -50px; }
+.icon-op.icon-castle    { background-position: -125px -25px; }
+.icon-op.icon-attack    { background-position: -150px -25px; }
+.icon-op.icon-simulator { background-position: -175px -25px; }
+
+.icon-op.icon-star       { background-position: 0px -50px; }
+.icon-op.icon-star-off   { background-position: -25px -50px; }
+.icon-op.icon-broken-castle     { background-position: -50px -50px; }
+.icon-op.icon-broken-castle-off { background-position: -75px -50px; }
+.icon-op.icon-pillage       { background-position: -100px -50px; }
+.icon-op.icon-pillage-off   { background-position: -125px -50px; }
+
+.icon-op.icon-provinces   { background-position: 0px -75px; }
+.icon-op.icon-resources   { background-position: -25px -75px; }
+.icon-op.icon-colony   { background-position: 0px -125px; }
+
+.icon-op.icon-castle-in   { width: 35px; background-position: 0px -100px; }
+.icon-op.icon-castle-out  { width: 35px; background-position: -34px -100px; }
+.icon-op.icon-army-field  { width: 30px; background-position: -125px -75px; }
+
+.icon-op.icon-provinces-20      { width: 35px; background-position: -68px -100px; }
+.icon-op.icon-provinces-20-off  { width: 35px; background-position: -104px -100px; }
+.icon-op.icon-province          { width: 35px; background-position: -140px -100px; }
+
+.icon-op.icon-arrow         { width: 13px; background-position: -171px -75px; }
+.icon-op.icon-arrow-curr    { width: 13px; background-position: -156px -75px; }
+
+/* === OPERATION CENTER WRAP ===*/
+.operation_center_1,
+.operation_center_1 td, .operation_center_1 th,
+.operation_center_2,
+.operation_center_2 td, .operation_center_2 th {
+    color: #48160B;
+}
+.operation_center_1 {
+    width: 702px;
+    margin: 0px 19px;
+    font-size: 12px;
+}
+.operation_center_2 {
+    width: 950px;
+}
+.table-v3.table-units tr:first-child th {
+    width: 25%;
+    line-height: 38px;
+}
+    .right-to-left .table-v3.table-units th:last-child,
+    .right-to-left .table-v3.table-units td:last-child { border-left: 1px solid #BEA883; }
+.table-v3.table-units th.nav {
+    line-height: 30px;
+    text-align: right;
+    border-top: none;
+    border-bottom: 1px solid #BEA883;
+}
+    .right-to-left .table-v3.table-units th.nav {
+        text-align: left;
+    }
+    .table-v3.table-units th.nav a {
+        margin: 0px 7px;
+    }
+.table-v3.table-units td {
+    line-height: normal;
+    padding: 10px 20px 20px 20px;
+    vertical-align: top;
+}
+.table-v3.table-units tr:hover td {
+    background-color: #FBECC3;
+}
+.table-v3.table-units .unit-input {
+    float: right;
+    width: 80px;
+    margin-bottom: 17px;
+    padding-top: 2px;
+}
+    .table-units .army-shadow {
+        margin-bottom: 14px;
+    }
+    .table-v3.table-units .unit-input a {
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        margin-bottom: 1px;
+        padding-right: 12px;
+        font-size: 13px;
+        background: #DCCFAB;
+    }
+    .right-to-left .table-v3.table-units .unit-input {
+        direction: ltr;
+    }
+    .table-v3.table-units .unit-input .input-v2 {
+        width: 68px;
+        height: 20px;
+        line-height: 20px;
+    }
+.table-v3-ruler {
+    display: inline-block;
+    width: 1px;
+    height: 25px;
+    vertical-align: middle;
+    background: #BEA883;
+}
+    .right-to-left .table-v3-title {
+        float: right;
+    }
+        .table-v3-title {
+            float: left;
+        }
+.table-v3-title {
+    height: 28px;
+    padding-left: 11px;
+    background: #C3B18B url("../gui/table-v3.png?v1") no-repeat -12px 0px;
+}
+    .table-v3-title-mid {
+        float: left;
+        line-height: 28px;
+        height: 28px;
+        background: #C3B18B url("../gui/table-v3.png?v1") repeat-x left -29px;
+    }
+        .table-v3-title-mid strong {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+            .right-to-left .table-v3-title-mid strong {
+                float: right;
+                margin: 0px 0px 0px 5px;
+            }
+    .table-v3-title-right {
+        float: left;
+        width: 11px;
+        height: 28px;
+        background: #C3B18B url("../gui/table-v3.png?v1") no-repeat;
+    }
+.select-button {
+    display: inline-block;
+    width: 18px;
+    height: 19px;
+    line-height: 19px;
+    margin: 3px 5px 0px 0px;
+    vertical-align: top;
+    text-align: center;
+    background: #FBECC3;
+    border: 1px solid #FBECC3;
+    cursor: pointer;
+}
+    .select-button.current {
+        color: #49160B;
+        font-weight: bold;
+        background: #D0C4A2;
+        border-color: #501F13;
+    }
+    .select-button.select-all {
+        width: auto;
+        padding: 0px 5px;
+        color: #170E11;
+        text-decoration: none;
+    }
+.operation_center_1 .custom-select a,
+.operation_center_2 .custom-select a {
+    color: #48160B;
+}
+.spy-image {
+    float: right;
+    width: 241px;
+    height: 83px;
+    margin-top: -55px;
+    background: url("../gui/operations-center-sprite.png?v1") no-repeat;
+}
+    .right-to-left .spy-image {
+        float: left;
+    }
+/* === MOVE ARMY === */
+.move-army-wrapper .table-v3.table-units {
+    margin-bottom: 28px;
+}
+.destination {
+    position: relative;
+    overflow: hidden; 
+    margin-top: 10px;
+}
+    .destination > div {
+        display: inline-block;
+        width: 52px;
+        margin-right: 11px;
+        border-right: 1px solid #705838;
+    }
+        .right-to-left .destination > div {
+            margin: 0px 0px 0px 11px;
+            border-right: none;
+            border-left: 1px solid #705838;
+        }
+
+.table-v3.move td {
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    border-right: none;
+    border-top: 1px solid #BEA883;
+}
+    .table-v3.move tr td:last-child {
+        border-right: 1px solid #BEA883;
+    }
+        .right-to-left .table-v3.move tr td:last-child {
+            border-right: none;
+            border-left: 1px solid #BEA883;
+        }
+    .table-v3.move tr:hover td {
+        background: #FBECC3;
+    }
+    .table-v3.move .custom-select {
+        min-width: 140px;
+    }
+.mass-spy-report-wrapper .actions,
+.move-all-army-wrapper .actions,
+.move-army-wrapper .actions {
+    margin: 0px auto;
+}
+.move-army-wrapper .actions td {
+    padding: 0px 15px;
+}
+    .move-army-wrapper .actions tr:first-child td.last {
+        padding-bottom: 10px;
+    }
+/* === MOVE ALL ARMY === */
+.move-all-army-wrapper {
+    width: 944px;
+    margin: 0 auto;
+}
+.table-all-army {
+    color: #49160b;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+    .table-all-army th { padding: 1px 0px 2px; }
+    .table-all-army td { padding: 0px 4px; }
+    .table-all-army .army-shadow {
+        float: none;
+        margin: 0 auto;
+    }
+    .table-all-army label {
+        font-size: 13px;
+        cursor: pointer;
+    }
+        .table-all-army td.spy-prov span {
+            display: inline-block;
+            width: 12px;
+            margin: 0px 2px 0px 2px;
+            text-align: right;
+         }
+    .table-all-army th.all-army-td {
+        padding: 0px 20px;
+        text-align: left;
+    }
+        .right-to-left .table-all-army th.all-army-td { text-align: right; }
+        .all-army-unit {
+            position: relative;
+                width: 46px;
+                height: 48px;
+            overflow: hidden;
+            display: block;
+        }
+        .all-army-unit input {
+            position: absolute;
+                right: 0px;
+                bottom: 3px;
+        }
+        .all-army-unit.disabled a {
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+        }
+        .all-army-unit.disabled input { display: none; }
+        .all-army-all-prov {
+            position: relative;
+            display: block;
+            padding: 0px 0px 10px;
+        }
+            .all-army-all-prov input {
+                position: absolute;
+                    left: 7px;
+                    bottom: -2px;
+            }
+    .table-all-army td:first-child {
+        padding: 0 2px;
+    }
+        .all-army-province,
+        .all-army-td label {
+            display: block;
+            width: 40px;
+            height: 20px;
+            line-height: 20px;
+            padding: 5px 10px;
+        }
+        .all-army-td label {
+            width: 100%;
+            padding: 5px 45px;
+        }
+            .all-army-province input { float: left; }
+/* === MASS SPY REPORT === */
+.mass-spy-report-wrapper {
+    margin: 0 auto;
+}
+.mass-spy-report-wrapper .table-v3 .right { font-size: 12px; }
+.mass-spy-report-wrapper .table-v3 th td,
+.mass-spy-report-wrapper .table-v3 td td {
+    border: none;
+    font-size: 12px;
+}
+    .mass-spy-report-wrapper .table-all-army th {
+        padding-top: 4px;
+    }
+    .mass-spy-report-wrapper .table-all-army tr.last th {
+        padding: 4px;
+    }
+    .mass-spy {
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    .mass-spy .spy-prov {
+        width: 50px;
+        font-size: 12px;
+        text-align: right;
+    }
+     .mass-spy td.info { width: 135px; }
+    .mass-spy td.spy-prov span {
+        display: inline-block;
+        width: 12px;
+        margin: 0px 5px;
+     }
+     .mass-spy th table td,
+     .mass-spy th table tr:hover td {
+        border: none !important;
+        background-color: transparent !important;
+     }
+    .mass-spy-report-wrapper .actions { margin-bottom: 10px; }
+    .mass-spy .actions a { vertical-align: middle; }
+
+.army-op-wraper {
+    text-align: center;
+}
+    .army-op-wraper .rope-devider {
+        display: inline-block;
+    }
+/* === ARMY ATTACK === */
+.table-army-info {
+    margin: 0px auto;
+}
+    .table-army-info td {
+        padding: 15px 24px 5px 0px;
+        font-weight: bold;
+        background: #E4D6AF;
+    }
+        .right-to-left .table-army-info td {
+            padding: 15px 0px 5px 24px;
+        }
+    .table-army-info .ltr-forever {
+        min-width: 75px;
+        text-align: right;
+    }
+    .table-army-info tr td:first-child {
+        padding-left: 15px;
+        border-left: 1px solid #BDA984;
+    }
+    .table-army-info tr td.last {
+        padding-right: 15px;
+        border-right: 1px solid #BDA984;
+    }
+        .right-to-left .table-army-info tr td.last {
+            padding-right: 0px;
+            padding-left: 15px;
+            border-right: none;
+            border-left: 1px solid #BDA984;
+        }
+    .table-army-info tr.last td {
+        padding-top: 0px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #BDA984;
+    }
+    .table-army-info .info-text {
+        padding-right: 5px;
+        font-weight: normal;
+    }
+.table-v3.attack {
+    margin-top: 20px;
+}
+     .table-v3.attack td {
+        height: 60px;
+        line-height: 60px;
+        vertical-align: middle;
+        text-align: center;
+     }
+        .table-v3.attack tr:hover td {
+            background: #FBECC3;
+        }
+    .table-v3.attack .search-user {
+        width: 240px;
+        font-size: 0px;
+        white-space: no-wrap;
+        border-right: none;
+    }
+        .right-to-left .table-v3.attack .search-user {
+            border-right: 1px solid #BEA883;
+            border-left: none;
+        }
+    .table-v3.attack .select-province {
+        position: relative;
+            z-index: 1001;
+        border-right: none;
+    }
+    .table-v3.attack .icon-terain {
+        margin-left: 20px;
+    }
+        .right-to-left .table-v3.attack .select-province {
+            border-left: none;
+        }
+        .right-to-left .table-v3.attack td {
+            border-right: none;
+            border-left: 1px solid #BEA883;
+        }
+     .table-v3.attack .icon-op {
+        margin: 0px 15px;
+     }
+    .table-v3.attack .search-user input,
+    .table-v3.attack .search-user button {
+        margin-right: 1px;
+        vertical-align: middle;
+    }
+    .table-v3.attack th {
+        line-height: 50px;
+        border-bottom: 1px solid #BEA883;
+    }
+    .table-v3.attack .custom-select {
+            z-index: 1000;
+        display: inline-block;
+        margin: 0px 20px;
+        vertical-align: middle;
+    }
+        .custom-select.castles { min-width: 160px; }
+        .custom-select.formation {
+            width: 250px;
+            text-align: left;
+        }
+        .right-to-left .table-v3.attack .custom-select {
+            margin: 0px 10px;
+        }
+    .table-v3.attack #refreshInfo {
+        min-width: 130px;
+    }
+.table-v3.info {
+    margin-top: 22px;
+}
+    .table-v3.info td {
+        font-size: 14px;
+        font-weight: bold;
+    }
+        .table-v3.info tr:hover td  { background: #FBECC3; }
+        .table-v3.info tr.stripe td { background: #EDDFB8; }
+        .right-to-left .table-v3.info td {
+            text-align: left;
+            border-right: none;
+        }
+    .table-v3.info .info-head {
+        padding-right: 0px;
+        font-weight: normal;
+        text-align: left;
+        border-right: none;
+    }
+        .right-to-left .table-v3.info .info-head {
+            padding: 0px 15px 0px 0px;
+            text-align: right;
+            border-right: 1px solid #BEA883;
+        }
+.attack-army-wrapper .actions {
+    margin: 15px auto 0px;
+}
+.attack-army-wrapper .actions td {
+    padding: 0px 7px;
+}
+.attack-army-wrapper .capitulation {
+    width: 450px;
+}
+.attack-army-wrapper .capitulation h3 {
+    margin: 30px 0px 10px 0px;
+}
+.attack-army-wrapper .capitulation th {
+    line-height: 38px;
+}
+.attack-army-wrapper .capitulation .table-v3 tr:hover td {
+    background-color: #FBECC3;
+}
+.attack-army-wrapper .capitulation .rankings-icon-nr {
+    margin-right: 10px;
+    vertical-align: top;
+}
+/* === SEND SPIES === */
+.send-spies-wrapper .actions {
+    margin: 25px auto 0px;
+}
+.send-spies-wrapper .table-v3 th {
+    line-height: 33px;
+}
+.send-spies-wrapper .table-v3 td:first-child,
+.send-spies-wrapper .table-v3 td.last {
+    text-align: center;
+}
+.send-spies-wrapper .table-v3 button { *padding: 2px 0px; }
+.table-v3 .province-input {
+    padding-left: 32px;
+    background-image: url("../gui/operations-center-sprite.png?v1");
+    background-position: -268px top;
+    background-repeat: no-repeat;
+}
+    .table-v3 .province-input input {
+        width: 65px;
+        height: 18px;
+        line-height: 18px;
+    }
+    .province-input.spyToAll {
+        padding-left: 0px;
+    }
+    .province-input.spyToAll a {
+        float: left;
+        display: inline-block;
+        width: 27px;
+        height: 17px;
+        margin-top: 8px;
+        background: url("../gui/operations-center-sprite.png?v1") no-repeat -242px -10px;
+    }
+.table-info-spies {
+    width: 100%;
+    margin: 10px 0px 15px;
+    font-size: 15px;
+}
+    .table-info-spies td {
+        padding: 0px 25px;
+    }
+    .table-info-spies tr td:first-child {
+        width: 50%;
+    }
+/* === COUNTER SPY === */
+.counter-spy-wrapper {
+    width: 642px;
+    padding: 55px 30px 0px 30px;
+}
+.counter-spy-wrapper .table-v3 {
+    margin-bottom: 18px;
+}
+.counter-spy-wrapper .table-v3 td {
+    font-size: 15px;
+    text-align: center;
+}
+/* === ARMY POSITIOM === */
+.army-position-wrapper {
+    width: 622px;
+    padding: 0px 40px;
+    margin-top: 30px;
+}
+.castle-info {
+    float: left;
+    width: 257px;
+    margin: 20px 30px 10px 0px;
+    text-align: center;
+}
+.castle-info .button-v2.med-green { margin-top: 15px; }
+.castle-info-wrap {
+    position: relative;
+        z-index: 2;
+    padding: 30px 18px 24px 18px;
+    background: #FBECC3;
+        -moz-box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.27);
+        -webkit-box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.27);
+        border-collapse: separate;
+    box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.27);
+}
+    .castle-info-wrap table {
+        width: 100%;
+        color: #563D1F;
+        font-size: 13px;
+    }
+    .castle-info-wrap td.left {
+        padding: 2px 20px 0px 2px;
+        border-right: 1px solid #49160B;
+    }
+    .castle-info-wrap td.right {
+        padding: 2px 0px 2px 25px;
+    }
+    .castle-info-wrap .arrow {
+        position: absolute;
+            top: 50%;
+            right: -23px;
+        width: 23px;
+        height: 41px;
+        margin-top: -21px;
+        background: url("../gui/operations-center-sprite.png?v1") no-repeat -242px -39px;
+    }
+.castle {
+    position: relative;
+        z-index: 1;
+    float: right;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+}
+.castle.broken {
+    width: 335px;
+    color: #7B2B1A;
+    background: url("../gui/castle-broken.png") no-repeat 30px 30px;
+}
+.castle.broken .button-v2 {
+    margin: 10px auto 5px;
+}
+    .castle.broken h1 {
+        min-height: 56px;
+        margin: 40px 20px 20px 130px;
+        font-size: 23px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 3px solid #7B2B1A;
+    }
+    .castle.broken p {
+        margin: 0px 0px 10px 40px;
+        font-size: 14px;
+    }
+.castle.race1 {
+    width: 335px;
+    height: 235px;
+}
+    .castle.race1.castle1 { background-image: url("../images/castles/1/castle1.jpg?3"); }
+    .castle.race1.castle2 { background-image: url("../images/castles/1/castle2.jpg?3"); }
+    .castle.race1.castle3 { background-image: url("../images/castles/1/castle3.jpg?3"); }
+    .castle.race1.castle4 { background-image: url("../images/castles/1/castle4.jpg?3"); }
+    .castle.race1.castle5 { background-image: url("../images/castles/1/castle5.jpg?3"); }
+    .castle.race1.castle6 { background-image: url("../images/castles/1/castle6.jpg?3"); }
+    .castle.race1.castle7 { background-image: url("../images/castles/1/castle7.jpg?3"); }
+    .castle.race1.castle8 { background-image: url("../images/castles/1/castle8.jpg?3"); }
+    .castle.race1.castle9,
+    .castle.race1.castle10 { background-image: url("../images/castles/1/castle9.jpg?3"); }
+.castle.race1 .castle-max-level { top: -3px; }
+.castle.race1 .castle-cur-level { top: -2px; }
+.castle.race2 {
+    width: 335px;
+    height: 245px;
+}
+    .castle.race2.castle1 { background-image: url("../images/castles/2/castle1.jpg?3"); }
+    .castle.race2.castle2 { background-image: url("../images/castles/2/castle2.jpg?3"); }
+    .castle.race2.castle3 { background-image: url("../images/castles/2/castle3.jpg?3"); }
+    .castle.race2.castle4 { background-image: url("../images/castles/2/castle4.jpg?3"); }
+    .castle.race2.castle5 { background-image: url("../images/castles/2/castle5.jpg?3"); }
+    .castle.race2.castle6 { background-image: url("../images/castles/2/castle6.jpg?3"); }
+    .castle.race2.castle7 { background-image: url("../images/castles/2/castle7.jpg?3"); }
+    .castle.race2.castle8 { background-image: url("../images/castles/2/castle8.jpg?3"); }
+    .castle.race2.castle9,
+    .castle.race2.castle10 { background-image: url("../images/castles/2/castle9.jpg?3"); }
+.castle.race1arabic {
+    width: 335px;
+    height: 250px;
+}
+    .castle.race1arabic.castle1 { background-image: url("../images/castles/1arabic/castle1.jpg?3"); }
+    .castle.race1arabic.castle2 { background-image: url("../images/castles/1arabic/castle2.jpg?3"); }
+    .castle.race1arabic.castle3 { background-image: url("../images/castles/1arabic/castle3.jpg?3"); }
+    .castle.race1arabic.castle4 { background-image: url("../images/castles/1arabic/castle4.jpg?3"); }
+    .castle.race1arabic.castle5 { background-image: url("../images/castles/1arabic/castle5.jpg?3"); }
+    .castle.race1arabic.castle6 { background-image: url("../images/castles/1arabic/castle6.jpg?3"); }
+    .castle.race1arabic.castle7 { background-image: url("../images/castles/1arabic/castle7.jpg?3"); }
+    .castle.race1arabic.castle8 { background-image: url("../images/castles/1arabic/castle8.jpg?3"); }
+    .castle.race1arabic.castle9,
+    .castle.race1arabic.castle10 { background-image: url("../images/castles/1arabic/castle9.jpg?3"); }
+.castle.race1arabic .castle-max-level { right: auto; left: 30px; top: 18px; }
+.castle.race1arabic .castle-cur-level { left: auto; right: 35px; top: 11px; }
+.castle-max-level {
+    position: absolute;
+        top: 24px;
+        left: 42px;
+        z-index: 1;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0px 5px;
+    color: #CFC9BB;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #B3A381;
+}
+    .castle.race1.castle1 .castle-max-level,
+    .castle.race1.castle2 .castle-max-level,
+    .castle.race1.castle3 .castle-max-level,
+    .castle.race1.castle4 .castle-max-level,
+    .castle.race1.castle5 .castle-max-level,
+    .castle.race1.castle1 .castle-cur-level,
+    .castle.race1.castle2 .castle-cur-level,
+    .castle.race1.castle3 .castle-cur-level,
+    .castle.race1.castle4 .castle-cur-level,
+    .castle.race1.castle5 .castle-cur-level { top: 7px !important; }
+    .castle.race2 .castle-max-level { top: 23px; left: 37px; }
+.castle-cur-level {
+     position: absolute;
+        top: 12px;
+        right: 36px;
+        z-index: 2;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0px 10px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #49160B;
+}
+    .castle.race2 .castle-cur-level         { top: 17px; right: 29px; }
+    .castle.race2.castle5 .castle-cur-level,
+    .castle.race2.castle6 .castle-cur-level { top: 22px; }
+    .castle.race2.castle7 .castle-cur-level { top: 4px; }
+    .castle.race2.castle8 .castle-cur-level { top: 13px; }
+    .castle.race2.castle9 .castle-cur-level { top: 8px; }
+    .castle.race1arabic.castle5 .castle-cur-level,
+    .castle.race1arabic.castle7 .castle-cur-level,
+    .castle.race1arabic.castle8 .castle-cur-level,
+    .castle.race1arabic.castle9 .castle-cur-level { right: 35px; }
+.army-position-wrapper .actions {
+    margin: 20px auto;
+}
+.army-position-wrapper .actions td {
+    padding: 0px 15px;
+    text-align: center;
+}
+.table-v3.move.behavior { margin-bottom: 7px; }
+.table-v3.move.behavior th {
+    line-height: 34px;
+    font-weight: bold;
+}
+.table-v3.move.behavior td { 
+    width: 50%;
+    padding: 0px;
+}
+.table-v3.move.behavior td.last {
+    line-height: normal;
+    padding: 5px 20px 10px 45px;
+    border-top: none;
+}
+    .table-v3.move.behavior td.last strong {
+        float: left;
+        height: 30px;
+        margin-right: 10px;
+    }
+        .right-to-left .table-v3.move.behavior td.last strong {
+            float: right;
+             margin: 0px 0px 0px 10px;
+        }
+.table-v3.move.behavior .radio-16 {
+    margin: 0px 5px;
+    vertical-align: middle;
+}
+.table-v3.move.behavior .table-v3-ruler {
+    float: none;
+    display: inline-block;
+    margin: 0px 15px 0px 15px;
+    vertical-align: middle;
+}
+.army-position-wrapper .move {
+    margin-bottom: 20px;
+}
+.table-v3.castle-army th {
+    height: 38px;
+    font-weight: bold;
+}
+.table-v3.castle-army td {
+    width: 114px;
+    padding: 3px 25px 3px 30px;
+    font-size: 13px;
+}
+.table-v3.castle-army a.unit    { float: left; }
+.table-v3.castle-army a         { float: right; }
+.table-v3.castle-army .input-soldiers {
+    line-height: 48px;
+}
+.table-v3.castle-army td.castle-army-move {
+    width: 170px;
+    padding: 0px 15px;
+    text-align: center;
+}
+.table-v3.castle-army td.castle-army-move input {
+    overflow: hidden;
+    width: 80px;
+    height: 18px;
+    line-height: 18px;
+    margin: 0px 5px;
+}
+.table-v3.castle-army td.castle-army-move a {
+    display: inline-block;
+    float: none;
+    width: 33px;
+    height: 21px;
+    vertical-align: middle;
+    background: url("../gui/icons-sprite-spy.png?v1") no-repeat -34px -100px;
+}
+.table-v3.castle-army td.castle-army-move a.move-in {
+    background-position: 0px -100px;
+}
+    .castle-army-move img.not-available { vertical-align: middle; }
+/* === DISMISS ALLIANCE ARMY === */
+.dismiss-army-wrapper {
+    width: 642px;
+    padding: 0px 30px;
+}
+.dismiss-army-wrapper .table-v3.table-units tr:hover td { background-color: #DFD2AD; }
+.dismiss-army-wrapper .table-v3.table-units tr:first-child th { width: auto; }
+.dismiss-army-wrapper .table-v3.table-units td {
+    line-height: 48px;
+    padding: 0px 40px 0px 20px;
+    vertical-align: middle;
+}
+    .right-to-left .dismiss-army-wrapper .table-v3.table-units td { padding: 0px 20px 0px 40px; }
+
+.dismiss-army-wrapper .table-v3.table-units td:first-child      {  width: 250px; }
+.dismiss-army-wrapper .table-v3.table-units th.nav              { line-height: 40px; }
+.dismiss-army-wrapper .table-v3.table-units th.nav:first-child  { border-right-width: 0px; }
+    .right-to-left .dismiss-army-wrapper .table-v3.table-units th.nav:first-child  { border-right-width: 1px; }
+
+.dismiss-army-wrapper .table-v3.table-units .unit { margin: 0px 0px 0px 35px; }
+    .right-to-left .dismiss-army-wrapper .table-v3.table-units .unit { 
+        float: right; 
+        margin: 0px 35px 0px 0px;
+    }
+.dismiss-army-wrapper .table-v3.table-units .unit-input { margin: 2px 8px 0px 0px; }
+    .right-to-left .dismiss-army-wrapper .table-v3.table-units .unit-input { float: left; margin: 2px 0px 0px 8px }
+.dismiss-army-wrapper .table-v3.table-units .hire-all-dismiss {
+    position: static;
+    float: right;
+    margin-top: 8px;
+}
+    .right-to-left .dismiss-army-wrapper .table-v3.table-units .hire-all-dismiss { float: left; }
+    .dismiss-army-wrapper .table-v3.table-units .ltr-forever {
+        width: 115px;
+        padding-right: 0px;
+        font-size: 13px;
+    }
+        .right-to-left .dismiss-army-wrapper .table-v3.table-units .ltr-forever { padding-left: 0px; }
+    .dismiss-army-wrapper .table-v3.table-units .ltr-forever.last {  width: 102px; padding-right: 10px; }
+        .right-to-left .dismiss-army-wrapper .table-v3.table-units .ltr-forever.last {  padding: 0px 20px 0px 10px; }
+    .dismiss-army-wrapper .table-v3.table-units .resources {
+        width: 52px;
+        padding: 0px !important;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .dismiss-army-wrapper .table-v3.table-units .ltr-forever,
+    .right-to-left .dismiss-army-wrapper .table-v3.table-units .ltr-forever.right.last,
+    .dismiss-army-wrapper .table-v3.table-units .resources.wood     { border-right-width: 0px; }
+        .right-to-left .dismiss-army-wrapper .table-v3.table-units .ltr-forever.right { border-right-width: 1px; }
+    .dismiss-army-wrapper .table-v3.table-units .resources.iron     { width: 82px; background-position: left center; }
+        .right-to-left .dismiss-army-wrapper .table-v3.table-units .resources.iron { border-left: 1px solid #BEA883; border-right: none; }
+        .right-to-left .dismiss-army-wrapper .table-v3.table-units .resources.iron { background-position: right center; }
+/* === SPY === */
+.spy-wrapper .search-user {
+    width: 175px;
+    margin: 0px auto 20px;
+    font-size: 2px;
+}
+.spy-wrapper .table-v3 td {
+    font-size: 14px;
+}
+    .spy-wrapper .table-v3 .subtable td { text-align: center; }
+    .spy-wrapper .table-v3 .subtable .nav {
+        padding: 0px 5px;
+        background: none;
+        border: none;
+        border-top: 1px solid #9E8F70;
+    }
+.spy-wrapper .table-v3 .show {
+    padding: 0px 8px;
+    font-size: 18px;
+    color: #563D1F;
+    text-align: center;
+    cursor: pointer;
+}
+.spy-wrapper .table-v3 .stats-icon-race,
+.spy-report-wrapper .table-v3 .stats-icon-race{
+    display: inline-block;
+    margin: 0px 10px 0px 0px;
+    vertical-align: middle;
+}
+.spy-wrapper .subtable .icon-op { margin: 0px auto; }
+.mass-spy .actions, 
+.spy-wrapper .actions { 
+    padding: 0px 5px; 
+    font-size: 1px;
+}
+    .mass-spy .info div,
+    .spy-wrapper .info div {
+        vertical-align: middle;
+        cursor: default;
+    }
+    .spy-wrapper .icon-op {
+        display: inline-block;
+        vertical-align: middle;
+    }
+/* === SPY REPORT === */
+.spy-report-wrapper {
+    width: 522px;
+    margin: 0 auto;
+    padding: 0px 90px;
+}
+.spy-report-wrapper .spy-image {
+    float: none !important;
+    margin: 0px auto;
+}
+.spy-report-wrapper .actions {
+    margin: 15px auto 0px;
+}
+.spy-report-wrapper .actions td {
+    padding: 0px 20px;
+}
+.spy-report-wrapper td.province {
+    text-align: center;
+}
+    .spy-report-wrapper td.province div { vertical-align: middle; }
+    .spy-report-wrapper td.province .icon-terain { margin-top: -5px; }
+.spy-report-wrapper .info-panel {
+    display: inline-block;
+    margin: 25px 0px;
+    vertical-align: top;
+    font-size: 14px;
+}
+    .spy-report-wrapper .info-resources {
+        width: 170px;
+    }
+        .spy-report-wrapper .info-resources .ltr-forever {
+            border-right-width: 0px;
+        }
+        .spy-report-wrapper .resources {
+            background-position: left center;
+            background-repeat: no-repeat;
+        }
+    .spy-report-wrapper .info-defense {
+        width: 125px;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+        .spy-report-wrapper .info-defense .first { border-right-width: 0px; }
+        .spy-report-wrapper .info-defense .price { margin: 2px 0px; }
+    .spy-report-wrapper .info-simulator {
+        width: 150px;
+    }
+    .spy-report-wrapper .info-simulator th {
+        padding: 0px 2px;
+        line-height: 34px;
+        font-size: 13px;
+    }
+    .spy-report-wrapper .info-simulator td {
+        line-height: 46px;
+        text-align: center;
+    }
+        .spy-report-wrapper .info-simulator .icon-op { float: left; }
+.table-v3.army-all {
+    margin-bottom: 15px;
+}
+    .army-who {
+        line-height: 23px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+.table-v3.army-all th {
+    width: 62px;
+    padding: 5px 0px 9px 0px;
+    border-top-width: 0px;
+}
+    .table-v3.table-all-army .first,
+    .table-v3.army-all .first {
+        width: 50px;
+        padding: 0px;
+    }
+    .table-v3.army-all .unit {
+        margin: 0px auto;
+    }
+.table-v3.army-all td {
+    line-height: 30px;
+    padding: 0px 5px;
+    font-size: 12px;
+    text-align: center;
+}
+/* === SPY SIMULATOR === */
+.spy-simulator-wrapper.operation_center_1 {
+    width: 672px;
+    padding: 0px 15px;
+}
+hr.separator {
+    height: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    border-top: 1px solid #927357;
+    border-bottom: 1px solid #7A543F;
+}
+.simulator-spy {
+    height: 255px;
+    text-align: center;
+}
+.simulator-box {
+    position: relative;
+    float: left;
+    width: 325px;
+    height: 215px;
+    text-align: center;
+    background: url("../gui/operations-center-sprite.png?v1") no-repeat 0px -320px;
+}
+.simulator-box h2 {
+    height: 30px;
+    line-height: 30px;
+    margin: 0px 0px 15px 0px;
+    padding: 0;
+    color: #4B170C;
+    font-size: 14px;
+    background: #BEB39D
+}
+    .simulator-box.first { 
+        margin-right: 15px;
+    }
+.input-spies {
+    line-height: 22px;
+    padding: 2px 30px 5px;
+    text-align: left;
+    font-size: 14px;
+}
+    .right-to-left .input-spies { text-align: right; }
+.input-spies input { float: right; }
+    .right-to-left .input-spies input { float: left; }
+.input-spies .input-v2 {
+    height: 18px;
+    line-height: 18px;
+}
+.input-spies-footer {
+    position: absolute;
+        bottom: 15px;
+        right: 27px;
+    height: 30px;
+}
+    .right-to-left .input-spies-footer {
+        right: 70px;
+    }
+.input-spies-footer a.big-button {
+    height: 26px;
+    line-height: 26px;
+    vertical-align: top;
+    margin: 0;
+}
+.input-spies-footer a.sim-clear {
+    display: inline-block;
+    width: 35px;
+    height: 34px;
+    background: url("../gui/simulator/small_buttons.png?v2") no-repeat right top;
+}
+.input-checkbox {
+    padding: 3px 25px 0px;
+    text-align: left;
+}
+    .right-to-left .input-checkbox { text-align: right; }
+.simulator-spy-result {
+    min-height: 280px;
+    margin-top: 30px;
+}
+.spy-simulator-image {
+    float: left;
+    width: 308px;
+    height: 235px;
+    margin: 30px 17px 0px 20px;
+    background: url("../gui/operations-center-sprite.png?v1") no-repeat 0px -84px;
+}
+    .right-to-left .spy-simulator-image { float: right; }
+.spy-result {
+    float: left;
+    width: 322px;
+    color: #4A1609;
+    font-size: 14px;
+}
+.spy-result table { width: 100%; }
+.spy-result tr.stripe { background: #BCA883; }
+.spy-result th {
+    padding: 20px 0px 0px 0px;
+    text-indent: 20px;
+    color: #4A1609;
+    font-size: 14px;
+    font-weight: bold;
+}
+.spy-result td {
+    padding: 5px 15px;
+    font-size: 13px;
+    line-height: 18px;
+}
+    .spy-result td:first-child { width: 20%; }
+.spy-simulator-wrapper .button-v2.med-green { margin-top: 15px; }
+.spy-simulator-clear {
+    float: right;
+    font-weight: normal;
+    text-decoration: none;
+    color: #48160B;
+}
+.spy-report-username {
+    width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* === ARMY IN RELIEF ===*/
+.army-relief {
+    margin: 25px auto 0px;
+}
+.army-relief .table-v3 td {
+    padding: 8px 15px;
+    line-height: normal;
+}
+.army-relief-gold { width: 100px; }
+.army-relief .ressource-gold {
+    display: inline-block;
+    height: 19px;
+    line-height: 21px;
+    vertical-align: middle;
+    padding-right: 34px !important;
+}
+/* ===  OPERATION CENTER 2.0 END === */

@@ -1,0 +1,21 @@
+{
+    "name": "Imperia Helper",
+    "version": "1.0",
+    "description": "Help to play Imperia",
+    "manifest_version": 2,
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+      },
+      "content_scripts": [
+        {
+          "matches": ["https://*.imperiaonline.org/imperia/game_v5/game/*"],
+          "css": ["style.css"],
+          "js": ["xajax.js","calls.js","content.js"]
+        }
+      ],
+      "icons": {
+       "128":"logo.png"
+      }
+  }

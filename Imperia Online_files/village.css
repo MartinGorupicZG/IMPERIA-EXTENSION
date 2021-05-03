@@ -1,0 +1,1964 @@
+@charset "UTF-8";
+
+body,
+.imperia {
+    cursor: default;
+    background: url('../gui/village-2/bg.jpg') 50% 0 no-repeat #28261a;
+}
+
+.nomads,
+.nomads .imperia {
+    background: url('../gui/village-2/NI_qualifications.png') 50% 0 no-repeat #28261a;
+}
+.vacation-mode-notice2 {
+    width: 510px;
+    padding: 343px 0px 0px 120px;
+    text-align: center;
+}
+h1.vacation-mode-nomads-title {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    color: #ECC260;
+    font-size: 42px;
+    /*font-family: Trebuchet MS, sans-serif;*/
+    font-family: Impact, Impact, Charcoal, sans-serif;
+    /*letter-spaccing: 1px;*/
+    text-shadow: 2px 2px 4px #000;
+}
+h2.vacation-mode-nomads-sub-title {
+    margin: 0px;
+    padding: 0px;
+    color: #AAA;
+    font-size: 36px;
+    font-family: Georgia, serif;
+}
+
+/** commented for testing purposes **/
+.dev-mode,
+.dev-mode .imperia {
+    background: url('../dev.png') 50% 50%, url('../gui/village-2/bg.jpg') 50% 0 no-repeat #28261a;
+}
+.test-mode,
+.test-mode .imperia {
+    background: url('../test.png') 50% 50%, url('../gui/village-2/bg.jpg') 50% 0 no-repeat #28261a;
+}
+.beta-mode,
+.beta-mode .imperia {
+    background: url('../beta.png') 50% 50%, url('../gui/village-2/bg.jpg') 50% 0 no-repeat #28261a;
+}
+
+
+.imperia {
+    width: 967px;
+    padding: 0 17px 0 20px;
+}
+
+.imperia,
+.boots {
+    position: relative;
+    margin: auto;
+}
+.helmet,
+.cuirass {
+    width: 100%;
+}
+
+.helmet a,
+.boots a,
+.hangin-peeps span {
+    display: block;
+    text-decoration: none;
+}
+
+.helmet a,
+.boots,
+.boots a,
+.missions a span,
+.provinces-cycle li,
+.tutorial-in-header,
+.hangin-peeps,
+.vacation-mode-notice .notice.type-neutral {
+    color: #fff;
+}
+
+/* HEADER */
+.helmet {
+    position: relative;
+    height: 122px;
+}
+
+    /* imperian castle tier 1 */
+    .terrain-code-1-1-1 .helmet {
+        background: url('../images/town/village-2/1/1/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-1-2 .helmet {
+        background: url('../images/town/village-2/1/1/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-1-3 .helmet {
+        background: url('../images/town/village-2/1/1/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-1-4 .helmet {
+        background: url('../images/town/village-2/1/1/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* imperian castle tier 2 */
+    .terrain-code-1-2-1 .helmet {
+        background: url('../images/town/village-2/1/2/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-2-2 .helmet {
+        background: url('../images/town/village-2/1/2/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-2-3 .helmet {
+        background: url('../images/town/village-2/1/2/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-2-4 .helmet {
+        background: url('../images/town/village-2/1/2/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* imperian castle tier 3 */
+    .terrain-code-1-3-1 .helmet {
+        background: url('../images/town/village-2/1/3/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-3-2 .helmet {
+        background: url('../images/town/village-2/1/3/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-3-3 .helmet {
+        background: url('../images/town/village-2/1/3/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-3-3.farm-0 .helmet {
+        background: url('../images/town/village-2/1/3/3-top-farm-0.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1-3-4 .helmet {
+        background: url('../images/town/village-2/1/3/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* nomad castle tier 1 */
+    .terrain-code-2-1-1 .helmet {
+        background: url('../images/town/village-2/2/1/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-1-2 .helmet {
+        background: url('../images/town/village-2/2/1/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-1-3 .helmet {
+        background: url('../images/town/village-2/2/1/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-1-4 .helmet {
+        background: url('../images/town/village-2/2/1/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* nomad castle tier 2 */
+    .terrain-code-2-2-1 .helmet {
+        background: url('../images/town/village-2/2/2/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-2-2 .helmet {
+        background: url('../images/town/village-2/2/2/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-2-3 .helmet {
+        background: url('../images/town/village-2/2/2/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-2-4 .helmet {
+        background: url('../images/town/village-2/2/2/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* nomad castle tier 3 */
+    .terrain-code-2-3-1 .helmet {
+        background: url('../images/town/village-2/2/3/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-3-2 .helmet {
+        background: url('../images/town/village-2/2/3/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-3-3 .helmet {
+        background: url('../images/town/village-2/2/3/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-3-3.farm-0 .helmet {
+        background: url('../images/town/village-2/2/3/3-top-farm-0.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2-3-4 .helmet {
+        background: url('../images/town/village-2/2/3/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* colonies */
+    .terrain-code-colony-1 .helmet {
+        background: url('../images/town/village-2/1/colony-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-colony-2 .helmet {
+        background: url('../images/town/village-2/2/colony-top.jpg') 0 100% no-repeat;
+    }
+    .arabic.terrain-code-colony-1 .helmet {
+        background: url('../images/town/village-2/1arabs/colony-top.jpg') 0 100% no-repeat;
+    }
+    .arabic.terrain-code-colony-1.tier-3 .helmet {
+        background: url('../images/town/village-2/1arabs/colony-top-houses.jpg') 0 100% no-repeat;
+    }
+
+    .terrain-code-castle .helmet {
+        background: url('../images/town/village-2/castle-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-rally-point .helmet {
+        background: url('../images/town/village-2/rally-point-top.jpg') 0 100% no-repeat;
+    }
+    .arabic.terrain-code-castle .helmet {
+        background: url('../images/town/village-2/1arabs/castle-top.jpg') 0 100% no-repeat;
+    }
+    .arabic.terrain-code-rally-point .helmet {
+        background: url('../images/town/village-2/1arabs/rally-point-top.jpg') 0 100% no-repeat;
+    }
+
+    /* arabic castle tier 1 */
+    .terrain-code-1a-1-1 .helmet {
+        background: url('../images/town/village-2/1arabs/1/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-1-2 .helmet {
+        background: url('../images/town/village-2/1arabs/1/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-1-3 .helmet {
+        background: url('../images/town/village-2/1arabs/1/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-1-4 .helmet {
+        background: url('../images/town/village-2/1arabs/1/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* arabic castle tier 2 */
+    .terrain-code-1a-2-1 .helmet {
+        background: url('../images/town/village-2/1arabs/2/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-2-2 .helmet {
+        background: url('../images/town/village-2/1arabs/2/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-2-3 .helmet {
+        background: url('../images/town/village-2/1arabs/2/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-2-4 .helmet {
+        background: url('../images/town/village-2/1arabs/2/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* arabic castle tier 3 */
+    .terrain-code-1a-3-1 .helmet {
+        background: url('../images/town/village-2/1arabs/3/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-3-2 .helmet {
+        background: url('../images/town/village-2/1arabs/3/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-3-3 .helmet {
+        background: url('../images/town/village-2/1arabs/3/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-3-3.farm-0 .helmet {
+        background: url('../images/town/village-2/1arabs/3/3-top-farm-0.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-1a-3-4 .helmet {
+        background: url('../images/town/village-2/1arabs/3/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* IO-2138 HOTFIX for Nomads at Arabic realms */
+    /* arabic castle tier 1 */
+    .terrain-code-2a-1-1 .helmet {
+        background: url('../images/town/village-2/2/1/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-1-2 .helmet {
+        background: url('../images/town/village-2/2/1/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-1-3 .helmet {
+        background: url('../images/town/village-2/2/1/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-1-4 .helmet {
+        background: url('../images/town/village-2/2/1/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* arabic castle tier 2 */
+    .terrain-code-2a-2-1 .helmet {
+        background: url('../images/town/village-2/2/2/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-2-2 .helmet {
+        background: url('../images/town/village-2/2/2/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-2-3 .helmet {
+        background: url('../images/town/village-2/2/2/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-2-4 .helmet {
+        background: url('../images/town/village-2/2/2/4-top.jpg') 0 100% no-repeat;
+    }
+
+    /* arabic castle tier 3 */
+    .terrain-code-2a-3-1 .helmet {
+        background: url('../images/town/village-2/2/3/1-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-3-2 .helmet {
+        background: url('../images/town/village-2/2/3/2-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-3-3 .helmet {
+        background: url('../images/town/village-2/2/3/3-top.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-3-3.farm-0 .helmet {
+        background: url('../images/town/village-2/2/3/3-top-farm-0.jpg') 0 100% no-repeat;
+    }
+    .terrain-code-2a-3-4 .helmet {
+       background: url('../images/town/village-2/2/3/4-top.jpg') 0 100% no-repeat;
+    }
+    /* IO-2138 END HOTFIX */
+
+    /* GENERAL "hangers" STYLES */
+    .hanger {
+        position: absolute;
+        top: -4px;
+        z-index: 2;
+        display: block;
+        width: 6px;
+        height: 15px;
+        background: url('../gui/village-2/step-1.png') -252px -126px no-repeat;
+    }
+
+    .hanger.hanger-left {
+        left: 4px;
+    }
+
+    .hanger.hanger-right {
+        right: 7px;
+    }
+
+    .on-second-row .hanger {
+        top: -7px;
+        width: 4px;
+        height: 12px;
+        background: url('../gui/village-2/step-2.png') -70px -119px no-repeat;
+    }
+    .on-second-row .hanger.hanger-left {
+        left: 5px;
+    }
+    /* / GENERAL "hangers" STYLES */
+
+
+    /* NEWS AND POLL */
+    .megaphone {
+        position: absolute;
+        top: 0;
+        left: -22px;
+        z-index: 10;
+    }
+        .megaphone li {
+            position: absolute;
+            left: 2px;
+        }
+        .megaphone a {
+            display: block;
+            width: 37px;
+            height: 48px;
+        }
+
+        .item-news {
+            top: 1px;
+            background: url('../gui/village-2/step-3.png?4') -144px -382px no-repeat;
+        }
+        .item-news.glow {
+            background-position: -144px -430px;
+        }
+
+        .item-poll {
+            top: 49px;
+            background: url('../gui/village-2/step-3.png?4') -144px -478px no-repeat;
+        }
+            .item-poll.glow {
+                background-position: -144px -526px;
+            }
+    /* / NEWS AND POLL */
+
+    /* AVATAR */
+    .helmet .avatar {
+        position: absolute;
+        top: 0;
+        left: -6px;
+        z-index: 2;
+        width: 100px;
+        height: 100px;
+        padding: 4px 5px;
+        background: url('../gui/village-2/avatar.png') no-repeat;
+        border: none;
+    }
+    /* / AVATAR */
+
+    /* CURRENT WARS */
+    .realms-wars,
+    .reminders {
+        position: absolute;
+        width: 50px;
+        height: 35px;
+        background: url('../gui/village-2/step-3.png?4') -88px -116px no-repeat;
+    }
+
+    .realms-wars {
+        top: 72px;
+        left: 105px;
+    }
+
+    .current-wars {
+        position: absolute;
+        left: 4px;
+    }
+        .current-wars a {
+            display: block;
+            width: 40px;
+            height: 30px;
+            background: url('../gui/village-2/step-3.png?4') -94px -151px no-repeat;
+        }
+    /* / CURRENT WARS */
+
+
+    /* PREMIUM MENU ENTRANCE LINK */
+    .hangin-premium {
+        position: absolute;
+        top: 4px;
+        left: 104px;
+        z-index: 1;
+        padding: 7px 9px 11px 4px;
+        background: url('../gui/village-2/step-1.png') -143px -147px no-repeat;
+    }
+        .hangin-premium a {
+            display: block;
+            width: 88px;
+            height: 25px;
+            padding-bottom: 31px;
+            line-height: 25px;
+            height: 25px;
+            font-size: 16px;
+            text-align: center;
+        }
+            .hangin-premium a.premium-rubin {
+                background: url('../gui/village-2/rubin.png') 4px 22px no-repeat;
+            }
+            li#diamonds a.premium-rubin {
+                background: url('../gui/village-2/rubin.png') 6px -6px no-repeat;
+            }
+    /* / PREMIUM MENU ENTRANCE LINK */
+
+
+    /* MARKET */
+    .market {
+        position: absolute;
+            top: 8px;
+            left: 199px;
+        width: 100px;
+        height: 68px;
+        font-size: 12px;
+        background: url('../gui/village-2/step-3.png?4') 0 0 no-repeat;
+    }
+
+    .market .hanger {
+        top: -8px;
+    }
+
+    .market .hanger-left {
+        left: 5px;
+    }
+
+    .market .hanger-right {
+        right: 10px;
+    }
+
+    .market li,
+    .market a {
+        display: block;
+    }
+
+    .item-wood,
+    .item-iron,
+    .item-stone {
+        position: absolute;
+        left: 13px;
+    }
+
+    .item-wood {
+        top: 4px;
+    }
+
+    .item-iron {
+        top: 22px;
+    }
+
+    .item-stone {
+        bottom: 10px;
+    }
+
+    .market a {
+        width: 30px;
+        height: 17px;
+        line-height: 17px;
+        padding: 0 30px 0 10px;
+        text-align: right;
+    }
+    /* / MARKET */
+
+    /* POPULATION, HAPPINESS AND TAX */
+    .happy-tax-peeps {
+        position: absolute;
+            top: 6px;
+            right: -17px;
+        z-index: 1;
+        height: 68px;
+        width: 129px;
+        font-size: 12px;
+        background: url('../gui/village-2/step-1.png') -143px -221px no-repeat;
+    }
+        .happy-tax-peeps li {
+            position: absolute;
+        }
+
+        .happy-tax-peeps .hanger {
+            top: -6px;
+        }
+
+        .happy-tax-peeps .hanger-right,
+        .announcement .hanger-right {
+            right: 14px;
+        }
+
+        .happy-tax-peeps a,
+        .hangin-peeps span {
+            height: 25px;
+            line-height: 25px;
+            padding: 0 32px 0 0;
+            text-align: right;
+        }
+        .hangin-peeps {
+            top: 6px;
+            width: 105px;
+        }
+            .hangin-peeps img {
+                position: absolute;
+                    right: 0px;
+            }
+        .hangin-happy {
+            right: 57px;
+            width: 59px;
+            padding-right: 6px;
+        }
+        .hangin-happy span {
+            position: absolute;
+            display: block;
+        }
+        .hangin-happy .trend-up,
+        .hangin-happy .trend-down {
+            right: 59px;
+            width: 13px;
+            height: 21px;
+            background: url('../gui/village-2/step-1.png') -307px -221px no-repeat;
+        }
+        .hangin-happy .trend-down {
+            background-position: -307px -246px;
+        }
+        .hangin-happy .happy-face-1,
+        .hangin-happy .happy-face-2,
+        .hangin-happy .happy-face-3,
+        .hangin-happy .happy-face-4 {
+            top: -2px;
+            right: 5px;
+            width: 31px;
+            height: 30px;
+            background: url('../gui/village-2/step-1.png') 0px -290px no-repeat;
+        }
+        .hangin-happy .happy-face-2 { background: url('../gui/village-2/step-1.png') -32px -290px no-repeat; }
+        .hangin-happy .happy-face-3 { background: url('../gui/village-2/step-1.png') -64px -290px no-repeat; }
+        .hangin-happy .happy-face-4 { background: url('../gui/village-2/step-1.png') -96px -290px no-repeat; }
+        .hangin-tax {
+            width: 38px;
+        }
+        .hangin-peeps,
+        .hangin-tax {
+            right: 17px;
+        }
+        .hangin-happy,
+        .hangin-tax {
+            top: 35px;
+        }
+    /* / POPULATION, HAPPINESS AND TAX */
+
+
+    /* MAILBOX */
+    .checkin-a-mail {
+        position: absolute;
+        top: 8px;
+        right: 107px;
+        width: 98px;
+        height: 68px;
+        background: url('../gui/village-2/step-2.png') 0 0 no-repeat;
+    }
+
+    .checkin-a-mail .hanger {
+        top: -8px;
+    }
+
+        .checkin-a-mail li {
+            position: absolute;
+        }
+
+        .checkin-a-mail a {
+            display: block;
+            width: 13px;
+            height: 9px;
+            padding: 1px;
+            background: url('../gui/village-2/step-2.png') 100% 100% no-repeat;
+        }
+
+        .open-unread-mail,
+        .open-read-mail {
+            top: 6px;
+            left: 7px;
+        }
+
+            .open-unread-mail a,
+            .open-read-mail a {
+                width: 40px;
+                height: 16px;
+                padding: 7px 0 27px 0;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                color: maroon;
+                background-position: -58px -131px;
+            }
+
+            .open-read-mail a {
+                background-image: none;
+                overflow: hidden;
+                text-indent: 9000px;
+            }
+
+        /* type 0 - personal */
+        .mailbox-item-type-0 {
+            top: 3px;
+            right: 28px;
+        }
+        .mailbox-item-type-0 a {
+            background-position: -70px -68px;
+        }
+
+        /* type 1 - military */
+        .mailbox-item-type-1 {
+            top: 3px;
+            right: 12px;
+        }
+        .mailbox-item-type-1 a {
+            background-position: -84px -68px;
+        }
+
+        /* type 2 - spy */
+        .mailbox-item-type-2 {
+            top: 14px;
+            right: 28px;
+        }
+        .mailbox-item-type-2 a {
+            background-position: -70px -78px;
+        }
+
+        /* type 3 - arrive */
+        .mailbox-item-type-3 {
+            top: 14px;
+            right: 12px;
+        }
+        .mailbox-item-type-3 a {
+            background-position: -84px -78px;
+        }
+
+        /* type 4 - ally announcements */
+        .mailbox-item-type-4 {
+            top: 25px;
+            right: 28px;
+        }
+        .mailbox-item-type-4 a {
+            background-position: -70px -88px;
+        }
+
+        /* type 6 - market */
+        .mailbox-item-type-6 {
+            top: 25px;
+            right: 12px;
+        }
+        .mailbox-item-type-6 a {
+            background-position: -84px -88px;
+        }
+
+        /* type 7 - ally */
+        .mailbox-item-type-7 {
+            top: 36px;
+            right: 28px;
+        }
+        .mailbox-item-type-7 a {
+            background-position: -70px -98px;
+        }
+
+        /* type 8 - system */
+        .mailbox-item-type-8 {
+            top: 36px;
+            right: 12px;
+        }
+        .mailbox-item-type-8 a {
+            background-position: -84px -98px;
+        }
+
+        /* type 16 - ally battles */
+        .mailbox-item-type-16 {
+            top: 47px;
+            right: 28px;
+        }
+        .mailbox-item-type-16 a {
+            background-position: -70px -108px;
+        }
+
+        /* type 14 - alliance tribune */
+        .mailbox-item-type-14 {
+            top: 47px;
+            right: 12px;
+        }
+        .mailbox-item-type-14 a {
+            background-position: -84px -108px;
+        }
+    /* / MAILBOX */
+
+    /* MAIN RESOURCES LIST */
+    .resources-list {
+        position: absolute;
+        top: 75px;
+        right: -17px;
+        z-index: 100;
+        padding: 3px 16px 12px 20px;
+        background: url('../gui/village-2/step-5.png?2') no-repeat -110px 0px;
+    }
+        .resources-secondary {
+            padding-top: 2px;
+            padding-left: 21px;
+            top: 150px;
+            background: url('../gui/village-2/step-1.png') 0 -147px no-repeat;
+        }
+
+    .resources-list li {
+        display: block;
+        float: left;
+        position: relative;
+        margin-left: 4px;
+        line-height: 16px;
+        font-size: 12px;
+    }
+
+    .resources-list li:first-child {
+        margin-left: 0;
+    }
+
+    .resources-list a {
+        position: relative;
+        width: 49px;
+        padding: 31px 0 15px 0;
+        text-align: center;
+    }
+        .resources-list a img {
+            position: absolute;
+                top: -4px;
+                left: 13px;
+        }
+    .resource-update {
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: 28px;
+        width: 22px;
+        height: 22px;
+        background-image: url('../gui/village-2/step-1.png');
+        background-repeat: no-repeat;
+    }
+
+    .adding {
+        background-position: -195px -110px;
+    }
+
+    .substracting {
+        background-position: -217px -110px;
+    }
+    /* / MAIN RESOURCES LIST */
+
+    /* GLOBAL AND PROVINCES MAPS */
+    .maps {
+        position: absolute;
+        bottom: -43px;
+        left: -20px;
+        z-index: 100;
+        width: 138px;
+        height: 66px;
+        background: url('../gui/village-2/step-1.png') 0 -223px no-repeat;
+    }
+
+    .maps li,
+    .maps a {
+        display: block;
+    }
+
+    .maps li {
+        position: absolute;
+    }
+
+    .maps a {
+        width: 50px;
+        height: 40px;
+    }
+        .map-global,
+        .map-provinces {
+            top: 2px;
+        }
+
+        .map-global {
+            left: 15px;
+        }
+
+        .map-provinces {
+            left: 71px;
+            z-index: 140;
+            background: url('../gui/village-2/step-3.png?4') 6px -162px no-repeat; /* the default terrain terrain-type-2 */
+        }
+            .map-provinces a {
+                position: relative;
+            }
+
+            .terrain-type-1 .map-provinces {
+                background: url('../gui/village-2/step-1.png') -197px -70px no-repeat;
+            }
+
+            .terrain-type-3 .map-provinces {
+                background-position: 6px -198px;
+            }
+
+            .terrain-type-4 .map-provinces {
+                background-position: -44px -162px;
+            }
+
+            .terrain-type-5 .map-provinces {
+                background-position: 6px -238px;
+            }
+
+            .terrain-type-6 .map-provinces {
+                background-position: 6px -278px;
+            }
+
+    .provinces-cycle {
+        position: absolute;
+        bottom: -65px;
+        left: 58px;
+        z-index: 100;
+        width: 46px;
+        height: 42px;
+        background: url('../gui/village-2/step-3.png?4') 0 -494px no-repeat;
+    }
+
+    .provinces-cycle li {
+        position: absolute;
+        top: 10px;
+        height: 18px;
+        line-height: 16px;
+        font-weight: bold;
+    }
+    .provinces-cycle a {
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: url('../gui/village-2/step-3.png?4') 100% 100% no-repeat;
+    }
+
+        .cycle-left {
+            left: -5px;
+        }
+
+        .cycle-current {
+            width: 100%;
+            text-align: center;
+        }
+
+        .cycle-right {
+            right: -5px;
+        }
+
+        .cycle-left a {
+            background-position: -94px -181px;
+        }
+        .cycle-right a {
+            background-position: -110px -181px;
+        }
+    /* / GLOBAL AND PROVINCES MAPS */
+
+    /* 10 HOUR / TUTORIAL / HAPPY HOUR / OTHER ANNOUNCEMENTS */
+    .announcement {
+        position: absolute;
+        top: 5px;
+        left: 293px;
+        z-index: 5;
+        background: url('../gui/village-2/step-1.png') 0 0 no-repeat;
+    }
+        .announcement-content {
+            width: 303px;
+            height: 56px;
+            padding: 6px 12px 8px 5px;
+        }
+
+    .announcement .hanger {
+        top: -5px;
+    }
+
+    #tutorial-in-header,
+    #tutorial-in-header b {
+        font-size: 12px;
+        font-weight: normal !important;
+    }
+    /* 10 HOUR / TUTORIAL / HAPPY HOUR / OTHER ANNOUNCEMENTS */
+
+    /* ARMY MISSIONS a.k.a. "Intruder alarm" */
+    ul.missions {
+        position: absolute;
+        top: 7px;
+        left: 334px;
+        z-index: 10;
+    }
+
+    .missions.on-second-row {
+        top: 72px;
+    }
+
+    .missions .hanger {
+        top: -7px;
+    }
+
+    .missions li {
+        position: relative;
+        display: block;
+        float: left;
+    }
+        .missions .outgoing.province {
+            background: url('../gui/village-2/step-2.png') 0 -128px no-repeat;
+        }
+        .missions .incoming.province {
+            background: url('../gui/village-2/step-3.png?4') -45px -494px no-repeat;
+        }
+        .missions .outgoing.castle {
+            background: url('../gui/village-2/step-4.png') 0 -37px no-repeat;
+        }
+        .missions .incoming.castle {
+            background: url('../gui/village-2/step-4.png') 0 0 no-repeat;
+        }
+
+    .missions a {
+        width: 58px;
+        height: 37px;
+    }
+
+    .missions a span {
+        position: absolute;
+        bottom: -8px;
+        right: -5px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 4px 5px 0;
+        font-weight: bold;
+        text-align: center;
+        background: url('../gui/village-2/step-3.png?4') -110px -442px no-repeat;
+    }
+    /* / ARMY MISSIONS */
+
+    /* FAST ARMY MOVE */
+    .fast-army,
+    .fast-resources {
+        position: absolute;
+        top: 8px;
+        z-index: 4;
+        width: 82px;
+        height: 68px;
+        background: url('../gui/village-2/step-3.png?4') -99px 0 no-repeat;
+    }
+
+    .fast-army .hanger,
+    .fast-resources .hanger {
+        top: -8px;
+    }
+
+    .fast-army {
+        left: 606px;
+    }
+
+    .fast-army li,
+    .fast-resources li {
+        position: absolute;
+    }
+
+    .fast-army a,
+    .fast-resources a {
+        width: 30px;
+        height: 30px;
+        background: url('../gui/village-2/step-3.png?4') 100% 100% no-repeat;
+    }
+
+    .item-army-garrison,
+    .fast-resources .item-fast-wood {
+        top: 2px;
+        left: 8px;
+    }
+
+    .item-army-field,
+    .fast-resources .item-fast-iron {
+        top: 2px;
+        left: 40px;
+    }
+
+    .item-army-supplies,
+    .fast-resources .item-fast-stone {
+        top: 32px;
+        left: 8px;
+    }
+
+    .item-army-spies,
+    .fast-resources .item-fast-supplies {
+        top: 32px;
+        left: 40px;
+    }
+
+    .item-army-garrison a {
+        background-position: 0 -382px;
+    }
+    .item-army-field a {
+        background-position: -30px -382px;
+    }
+    .item-army-supplies a {
+        background-position: -60px -382px;
+    }
+    .item-army-spies a {
+        background-position: -90px -382px;
+    }
+    /* / FAST ARMY MOVE */
+
+    /* FAST RESOURCES MOVE */
+    .fast-resources {
+        left: 684px
+    }
+
+    .item-fast-wood a {
+        background-position: 0 -412px;
+    }
+    .item-fast-iron a {
+        background-position: -30px -412px;
+    }
+    .item-fast-stone a {
+        background-position: -60px -412px;
+    }
+    .item-fast-supplies a {
+        background-position: -90px -412px;
+    }
+    /* / FAST RESOURCES MOVE */
+
+    /* SERVER TIME */
+    .server-time {
+        position: absolute;
+            top: 75px;
+            right: 191px;
+        z-index: 100;
+        width: 110px;
+        height: 52px;
+        font-size: 12px;
+        background: url('../gui/village-2/step-5.png?2') no-repeat 2px 0px;
+    }
+        .server-time #js-alternative-clock {
+            display: block;
+            position: absolute;
+                top: 10px;
+                left: 38px;
+            width: 50px;
+            height: 14px;
+            color: #FDEA71;
+            text-decoration: none;
+        }
+        .end-realm-timer {
+            position: absolute;
+                top: 26px;
+                left: 32px;
+            width: 70px;
+            height: 50px;
+            line-height: 30px;
+            color: #FFF;
+            text-align: center;
+            background: url('../gui/village-2/step-5.png?2') no-repeat -300px -27px;
+        }
+    /* / SERVER TIME */
+    .championship-yello-flag {
+        position: absolute;
+            top: 75px;
+            right: 268px;
+        z-index: 101;
+        width: 139px;
+        height: 52px;
+        background: url('../gui/bg_championship_flag.png') no-repeat 2px 0px;
+    }
+        .championship-yello-flag object,
+        .championship-yello-flag #js-alternative-clock {
+            display: block;
+            position: absolute;
+                top: 9px;
+                left: 44px;
+            width: 55px;
+            height: 14px;
+        }
+/* / HEADER */
+
+/* MAIN VILLAGE AREA */
+.cuirass,
+.village-flash-movie {
+    height: 501px;
+    width: 967px;
+}
+
+.village-flash-movie {
+    background-color: #8b8670;
+}
+
+    /* LEFT MENU */
+    .left-menu,
+    .right-menu {
+        z-index: 100;
+    }
+    .left-menu {
+        position: absolute;
+        top: 151px;
+        left: 13px;
+        width: 56px;
+        padding: 0 0 15px 1px;
+        margin: 0;
+        background: url('../gui/village-2/left-menu-bg.png') 0 100% no-repeat;
+    }
+
+    .left-menu.additional {
+        top: 411px;
+        display: none;
+    }
+    .left-menu.additional li {
+        display: none;
+    }
+        .left-menu li:first-child {
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: url('../gui/village-2/left-menu-bg.png') 0 0 no-repeat;
+        }
+
+        .left-menu li:first-child i,
+        .left-menu .bottom-hanger {
+            position: absolute;
+            left: -5px;
+            display: block;
+            width: 16px;
+            height: 21px;
+            background: url('../gui/village-2/step-1.png') -258px -126px no-repeat;
+        }
+
+        .left-menu li:first-child i {
+            top: 15px;
+        }
+
+        .left-menu .bottom-hanger {
+            bottom: 32px;
+        }
+
+        .left-menu li {
+            position: relative;
+            float: left;
+        }
+
+        .left-menu li,
+        .left-menu a {
+            display: block;
+        }
+
+        .left-menu a {
+            position: relative;
+            width: 46px;
+            height: 48px;
+            text-decoration: none;
+            text-align: center;
+        }
+            .item-throne-hall a {
+                background: url('../gui/village-2/step-1.png') -274px -126px no-repeat;
+            }
+            .item-rankings a {
+                background: url('../gui/village-2/step-1.png') -274px -170px no-repeat;
+            }
+            .item-alliance a {
+                background: url('../gui/village-2/step-3.png?4') 3px -68px no-repeat;
+            }
+            .item-bookmarks a {
+                background: url('../gui/village-2/step-3.png?4') -43px -68px no-repeat;
+            }
+            .item-achievements a {
+                background: url('../gui/village-2/step-3.png?4') -89px -68px no-repeat;
+            }
+            .item-achievements.glow a {
+                background: url('../gui/village-2/step-3.png?4') -135px -68px no-repeat;
+            }
+            .item-achievements span {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 3px;
+                width: 19px;
+                height: 24px;
+                background: url('../images/strelka_anime1.gif') 0 0 no-repeat;
+            }
+            .item-achievements.glow span {
+                display: block;
+            }
+            .item-achievements.glow.no-arrow span {
+                background: none;
+            }
+            .item-warincome a {
+                background: url('../gui/village-2/nomads_war_income.png') 3px 0px no-repeat;
+            }
+
+            /* ADDITIONAL LEFT MENU */
+            .item-capital a {
+                width: 43px;
+                line-height: 46px;
+                padding-right: 3px;
+                color: #000;
+                font-weight: bold;
+                text-align: center;
+                background: url('../gui/village-2/step-3.png?4') 4px -116px no-repeat;
+            }
+            .item-provinces a {
+                background: url('../gui/village-2/step-3.png?4') -42px -116px no-repeat;
+            }
+            .item-colonies a {
+                background: url('../gui/village-2/step-4.png') 3px -74px no-repeat;
+            }
+            .item-castle a {
+                background: url('../gui/village-2/step-4.png') 3px -120px no-repeat;
+            }
+            /* ADDITIONAL LEFT MENU */
+
+            li.item-throne-hall,
+            li.item-rankings,
+            li.item-alliance,
+            li.item-bookmarks,
+            li.item-achievements,
+
+            li.item-capital,
+            li.item-provinces,
+            li.item-colonies,
+            li.item-castle {
+                display: none;
+            }
+    /* / LEFT MENU */
+
+    /* RIGHT MENU */
+    .right-menu {
+        position: absolute;
+        right: -17px;
+        top: 0;
+    }
+
+    .right-menu li,
+    .right-menu a {
+        display: block;
+    }
+    .right-menu li {
+        position: absolute;
+        right: 17px;
+        background-image: url('../gui/village-2/step-3.png?4');
+        background-repeat: no-repeat;
+        display: none;
+    }
+        li.item-whales-chat {
+            background-position: -113px -322px;
+            bottom: -282px;
+            right: 80px;
+            background: url('../gui/village-2/vip_chat.png') no-repeat;
+        }
+        li.item-premium {
+            background-position: -113px -322px;
+            bottom: -282px;
+        }
+        li.item-premium.active {
+            background-position: -44px -322px;
+        }
+        li.item-fast-hire {
+            background-position: -44px -202px;
+            bottom: -342px;
+        }
+        li.item-buildings {
+            background-position: -112px -202px;
+            bottom: -402px;
+        }
+        li.item-transport {
+            background-position: -44px -262px;
+            bottom: -462px;
+        }
+        li.item-trainings {
+            background: url('../gui/village-2/step-2.png') 0 -68px;
+            bottom: -522px;
+        }
+        li.item-settings {
+            background-position: -112px -262px;
+            bottom: -607px;
+        }
+
+    .right-menu a {
+        width: 70px;
+        height: 60px;
+    }
+    /* / RIGHT MENU */
+
+/* / MAIN VILLAGE AREA */
+
+/* FOOTER */
+.boots {
+    z-index: 150;
+    margin: 5px 0 0;
+    height: 55px;
+    line-height: 55px;
+}
+    .footer-langs {
+        float: left;
+        margin: 20px 0 0;
+    }
+        .close-to-block {
+            color: red;
+        }
+    /* / OFFLINE TIMER */
+
+    .footer-langs a {
+        color: #000;
+    }
+
+    .footer-langs a:hover {
+        text-decoration: none;
+    }
+
+    .footer-links {
+        float: right;
+    }
+
+        .footer-links a {
+            display: block;
+            height: 55px;
+            background: url('../gui/village-2/footer-links.png?v6') 0 0 no-repeat;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links li {
+            float: left;
+        }
+
+        .footer-links li:first-child {
+            margin-left: 0;
+        }
+
+            /* logout */
+            .footer-item-logout a {
+                width: 42px;
+            }
+            .footer-item-logout a:hover {
+                background-position: -66px 0;
+            }
+
+            /* switch realm */
+            .footer-item-switch-realm a {
+                width: 51px;
+                background-position: 0 -55px;
+            }
+            .footer-item-switch-realm  a:hover {
+                background-position: -66px -55px;
+            }
+
+            /* forum */
+            .footer-item-forum a {
+                width: 66px;
+                background-position: 0 -110px;
+            }
+            .footer-item-forum a:hover {
+                background-position: -66px -110px;
+            }
+
+            /* faq */
+            .footer-item-faq a {
+                width: 58px;
+                background-position: 0 -165px;
+            }
+            .footer-item-faq a:hover {
+                background-position: -66px -165px;
+            }
+
+            /* how to play */
+            .footer-item-how-to-play a {
+                width: 53px;
+                background-position: 0 -220px;
+            }
+            .footer-item-how-to-play a:hover {
+                background-position: -66px -220px;
+            }
+
+            /* tech tree */
+            .footer-item-tech-tree a {
+                width: 57px;
+                background-position: 0 -275px;
+            }
+            .footer-item-tech-tree a:hover {
+                background-position: -66px -275px;
+            }
+
+            /* battle of the day */
+            .footer-item-battle-of-the-day a {
+                width: 50px;
+                background-position: 0 -330px;
+            }
+            .footer-item-battle-of-the-day a:hover{
+                background-position: -66px -330px;
+            }
+
+            /* facebook */
+            .footer-item-fb a {
+                width: 58px;
+                background-position: 0 -385px;
+            }
+            .footer-item-fb a:hover {
+                background-position: -66px -385px;
+            }
+
+            /* new realm normal */
+            .footer-item-new-realm a {
+                width: 59px;
+                background-position: 0 -440px;
+            }
+            .footer-item-new-realm a:hover {
+                background-position: -66px -440px;
+            }
+
+            /* new realm blitz */
+            .footer-item-new-realm-blitz a {
+                width: 59px;
+                background-position: 0 -495px;
+            }
+            .footer-item-new-realm-blitz a:hover {
+                background-position: -66px -495px;
+            }
+
+            /* new realm special */
+            .footer-item-new-realm-special a {
+                width: 59px;
+                background-position: 0 -550px;
+            }
+            .footer-item-new-realm-special a:hover {
+                background-position: -66px -550px;
+            }
+            /* new realm special */
+            .footer-item-new-realm-champions a {
+                width: 49px;
+                background-position: 0 -716px;
+            }
+            .footer-item-new-realm-champions a:hover {
+                background-position: -66px -716px;
+            }
+            /* blog */
+            .footer-item-blog a {
+                width: 55px;
+                background-position: 0 -605px;
+            }
+            .footer-item-blog a:hover {
+                background-position: -66px -605px;
+            }
+
+            /* fen shop */
+            .footer-item-fen-shop a {
+                width: 63px;
+                background-position: 0 -660px;
+            }
+            .footer-item-fen-shop a:hover {
+                background-position: -66px -660px;
+            }
+            /* odnoklassniki */
+            .footer-item-odn a {
+                width: 35px;
+                background: url(../odnoklassniki/footer_odnoklassniki.png) 0px 3px;
+            }
+            .footer-item-odn a:hover {
+                background-position: -35px 3px;
+            }
+            /* VIDEO TUTORIALS */
+            .footer-item-video a {
+                width: 62px;
+                background-position: 0px -770px;
+            }
+            .footer-item-video a:hover {
+                background-position: -67px -770px;
+            }
+            .footer-item-video-wc a {
+                width: 63px;
+                height: 70px;
+                background-position: 0 -826px;
+            }
+            .footer-item-video-wc a:hover {
+                background-position: -63px -826px;
+            }
+/* / FOOTER */
+
+/* ANNOUNCEMENTS */
+.ten-hour-income,
+.happy-hour {
+    display: block;
+    position: relative;
+    height: 56px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ten-hour-income em,
+.happy-hour em,
+.ten-hour-income ins,
+.happy-hour ins {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+}
+
+.ten-hour-income em {
+    top: 5px;
+}
+
+.ten-hour-income em,
+.happy-hour em {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.ten-hour-income ins,
+.happy-hour ins {
+    bottom: 0;
+    text-decoration: none;
+    line-height: 28px;
+}
+.right-to-left .ten-hour-income ins {
+    direction: ltr;
+}
+
+.ten-hour-income span {
+    padding-left: 2px;
+}
+
+.ten-hour-income span:first-child {
+    padding-left: 0;
+}
+/* / ANNOUNCEMENTS */
+
+/* RESOURCES */
+.resource-22 { padding-right:24px; }
+.resource-22.wood  { background: url('../images/resursi/wood-22.png') 100% 50% no-repeat; }
+.resource-22.iron  { background: url('../images/resursi/iron-22.png') 100% 50% no-repeat; }
+.resource-22.stone { background: url('../images/resursi/stone-22.png') 100% 50% no-repeat; }
+.resource-22.gold  { background: url('../images/resursi/gold-22.png') 100% 50% no-repeat; }
+/* / RESOURCES */
+
+/* PROMOTIONS */
+/* diamond-shop - bonus resources when buying diamonds */
+#diamond-shop {
+    margin-top: 10px;
+    background: url('../gui/menu.png?10') -159px -346px no-repeat ;
+}
+#diamond-shop a {
+    width: 67px;
+    height: 64px;
+}
+/* bonus-diamond-shop - 20% diamonds bonys after realm restart */
+#bonus-diamond-shop {
+    background: url('../images/payments/bonus/bonus.png?a') 0 0 no-repeat ;
+}
+.village-promotions #bonus-diamond-shop a {
+    width: 119px;
+    height: 75px;
+}
+/* bonus 20% diamonds with timer - v6 look*/
+#bonus-diamond-20,
+#bonus-diamond-30,
+#bonus-diamond-40,
+#bonus-diamond-50,
+#bonus-diamond-60,
+#bonus-diamond-70,
+#bonus-diamond-80,
+#bonus-diamond-90,
+#bonus-diamond-100,
+#bonus-paypal-promo,
+#bonus-diamond-till_50,
+#bonus-diamond-till_100 {
+    width: 122px;
+    height: 75px;
+}
+#bonus-diamond-20       { background: url('../gui/village-2/footer/ui-foot-diamond-x20.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-30       { background: url('../gui/village-2/footer/ui-foot-diamond-x30.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-40       { background: url('../gui/village-2/footer/ui-foot-diamond-x40.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-50       { background: url('../gui/village-2/footer/ui-foot-diamond-x50.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-60       { background: url('../gui/village-2/footer/ui-foot-diamond-x60.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-70       { background: url('../gui/village-2/footer/ui-foot-diamond-x70.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-80       { background: url('../gui/village-2/footer/ui-foot-diamond-x80.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-90       { background: url('../gui/village-2/footer/ui-foot-diamond-x90.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-100      { background: url('../gui/village-2/footer/ui-foot-diamond-x100.png?v=1') 0 0 no-repeat; }
+#bonus-paypal-promo     { background: url('../gui/village-2/footer/ui-foot-paypal-sale.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-till_50  { background: url('../gui/village-2/footer/ui-foot-diamond-x20-50.png?v=1') 0 0 no-repeat; }
+#bonus-diamond-till_100 { background: url('../gui/village-2/footer/ui-foot-diamond-x40-100.png?v=1') 0 0 no-repeat; }
+
+#temple-x50             { background: url('../gui/village-2/footer/ui-foot-temple-x50.png') 0 0 no-repeat; }
+#temple-sucsription     { background: url('../gui/village-2/footer/ui-foot-temple-sub.png') 0 0 no-repeat; }
+.arabic #temple-x50     { background: url('../gui/village-2/footer/ui-foot-temple-x50_ar.png') 0 0 no-repeat; }
+.race-id-2 #temple-x50  { background: url('../gui/village-2/footer/ui-foot-temple-x50_nomad.png') 0 0 no-repeat; }
+
+#bonus-diamond-20:hover,
+#bonus-diamond-30:hover,
+#bonus-diamond-40:hover,
+#bonus-diamond-50:hover,
+#bonus-diamond-60:hover,
+#bonus-diamond-70:hover,
+#bonus-diamond-80:hover,
+#bonus-diamond-90:hover,
+#bonus-diamond-100:hover,
+#bonus-paypal-promo:hover,
+#bonus-diamond-till_50:hover,
+#temple-x50:hover,
+#temple-sucsription:hover { background-position: 0px -75px; }
+#bonus-diamond-20 a,
+#bonus-diamond-30 a,
+#bonus-diamond-40 a,
+#bonus-diamond-50 a,
+#bonus-diamond-60 a,
+#bonus-diamond-70 a,
+#bonus-diamond-80 a,
+#bonus-diamond-90 a,
+#bonus-diamond-100 a,
+#bonus-paypal-promo a,
+#bonus-diamond-till_50 a,
+#bonus-diamond-till_100 a,
+#temple-x50, #temple-x50 a,
+#temple-sucsription a {
+    position: relative;
+    width: 122px;
+    height: 75px;
+}
+.presentClock.hide {
+    visibility: hidden;
+}
+#temple-sucsription a,
+#temple-x50 a {
+    color: #FFF;
+    text-decoration: none;
+}
+/* bonus-diamond-promotion - 150 for 150 */
+.village-promotions #bonus-diamond-promotion {
+    background: url('../images/payments/bonus/userestore_promotion.png?1') 0 0 no-repeat;
+}
+/* gifts */
+.village-promotions #send-gifts {
+    background: url('../images/icons/gifts.png') 0 0 no-repeat !important;
+}
+.village-promotions #send-gifts a {
+    width: 120px;
+    height: 72px;
+}
+/* / PROMOTIONS */
+.ui-promotions {
+    position: absolute;
+        left: 465px;
+        bottom: 136px;
+        z-index: 100;
+    width: 460px;
+    height: 0;
+}
+.ui-promotions a {
+    display: block;
+    position: relative;
+}
+.ui-promotions li {
+    float: left;
+    margin-right: 5px;
+}
+.ui-ftimer {
+    position: absolute;
+        bottom: 2px;
+        left: 36px;
+    display: block;
+    width: 70px;
+    height: 18px;
+    line-height: 19px;
+    color: #FFF;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+}
+/* new promotion widgets v6 */
+.uif {
+    position: relative;
+    display: block;
+    width: 122px;
+    height: 75px;
+}
+.uif:hover { background-position: 0 -75px; }
+.uif > span {
+    position: absolute;
+        top: 15px;
+    height: 18px;
+    line-height: 18px;
+    color: #FFF;
+    text-align: center;
+}
+.uif .uif-dnum {
+    width: 52px;
+    font-size: 13px;
+    /*font-weight: bold;*/
+}
+.uif .uif-cnum {
+    width: 54px;
+    font-size: 13px;
+    /*font-weight: bold;*/
+}
+.uif .uif-cnum + .uif-cnum {
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
+    background: #654734;
+    border-radius: 13px;
+}
+.uif .ui-ftimer {
+        top: 56px;
+        left: 20px;
+    min-width: 60px;
+    height: 16px;
+    line-height: 14px;
+    padding: 2px 3px 0 18px;
+    font-size: 12px;
+    /* text-align: left; */
+    /* background: url("../gui/village-2/footer/uif-timer.png") no-repeat 0px 0px; */
+}
+/* diamonds */
+.uif-d { background-image: url("../gui/village-2/footer/uif-d.png"); }
+.uif-d .uif-cnum { display: none; }
+.uif-d .uif-dnum { left: 48px; }
+
+/* diamonds progresive */
+.uif-dp { background-image: url("../gui/village-2/footer/uif-dp.png"); }
+.uif-dp .uif-cnum { display: none; }
+.uif-dp .uif-dnum {
+    left: 38px;
+    width: 67px;
+}
+
+/* chest */
+.uif-c { background-image: url("../gui/village-2/footer/uif-c.png"); }
+.uif-c .uif-dnum { display: none; }
+.uif-c .uif-cnum { left: 30px; }
+.uif-c .uif-cnum + .uif-cnum {
+    top: 32px;
+    left: 64px;
+}
+
+/* diamonds + chest */
+.uif-dc { background-image: url("../gui/village-2/footer/uif-dc.png"); }
+.uif-dc .uif-dnum { left: 11px; }
+.uif-dc .uif-cnum { left: 58px; }
+.uif-dc .uif-cnum + .uif-cnum {
+    top: 34px;
+    left: 85px;
+}
+
+/* diamonds progresive + chest */
+.uif-dpc { background-image: url("../gui/village-2/footer/uif-dpc.png"); }
+.uif-dpc .uif-dnum {
+        left: 2px;
+    width: 66px;
+    font-size: 11px;
+}
+.uif-dpc .uif-cnum { left: 66px; }
+.uif-dpc .uif-cnum + .uif-cnum {
+    top: 34px;
+    left: 85px;
+}
+.uif-dis-christmas { 
+    width: 157px;
+    height: 96px;
+    background-image: url("../gui/village-2/footer/uif-dis-christmas.png");
+    background-position: 0 -17px; 
+}
+.uif-dis-christmas:hover { background-position: 0 79px; }
+
+.uif-dis-christmas .ui-ftimer {
+    top: 40px;
+    left: 50px;
+}
+.uif-dis { 
+    width: 157px;
+    height: 96px;
+    background-image: url("../gui/village-2/footer/uif-dis-50.png");
+    background-position: 0 -17px; 
+}
+.uif-dis:hover { background-position: 0 79px; }
+
+.uif-dis .ui-ftimer {
+    top: 39px;
+    left: 50px;
+}
+/* payment discount */
+.payment-discount {
+    background-image: url("../gui/village-2/footer/ui-foot-discount.png?v=#{$ver-gui}#{$ver-village}");
+}
+.payment-discount .ui-ftimer {
+    background: none;
+}
+/* / new promotion widgets v6 */
+/* WORLDBOSS */
+#village-worldboss a {
+    position: relative;
+    display: block;
+    width: 122px;
+    height: 75px;
+}
+#village-worldboss a.type-fortress          { background-image: url("../gui/village-2/footer/worldboss-born.png?v=2"); }
+#village-worldboss a.type-fortress.active   { background-image: url("../gui/village-2/footer/worldboss-attack.png"); }
+#village-worldboss a.type-fortress.finished    { background-image: url("../gui/village-2/footer/worldboss-dead.png"); }
+#village-worldboss a.type-treasury             { background-image: url("../gui/village-2/footer/worldboss2-born.png"); }
+#village-worldboss a.type-treasury.active      { background-image: url("../gui/village-2/footer/worldboss2-attack.png"); }
+#village-worldboss a.type-treasury.finished    { background-image: url("../gui/village-2/footer/worldboss-dead.png"); }
+#village-worldboss a:hover { background-position: 0 -75px; }
+
+#widget-custom-promo,
+#widget-custom-promo a {
+    display: block;
+    width: 100px;
+    height: 63px;
+    margin-top: 6px;
+}
+#widget-custom-promo a {
+    background-image: url("../gui/village-2/footer/time_offer_widget.png?v=#{$ver-gui}#{$ver-village}");
+}
+#widget-custom-promo .ui-ftimer {
+    background: #31468a;
+}
+/* / WORLDBOSS */
+/* TUTORIAL-IN-HEADER */
+.tutorial-in-header {
+    position: relative;
+    width: 303px;
+    height: 56px;
+}
+.tutorial-in-header p {
+    margin: 6px 0 0;
+}
+.tutorial-in-header p a {
+    display: block;
+    float: left;
+    margin: -6px 5px 5px 0;
+    width: 73px;
+    height: 56px;
+    background: url('../gui/village-2/step-1.png') -247px -70px no-repeat;
+}
+.tutorial-in-header.arab-special p a { background: url('../gui/tutorial/arabic/advizor-top.png') 0px 0px no-repeat; }
+.tutorial-in-header-more {
+    position: absolute;
+    bottom: 11px;
+    right: 5px;
+    text-decoration: underline !important;
+}
+/* / TUTORIAL-IN-HEADER */
+
+/* VACATION MODE */
+.vacation-mode-notice {
+    width: 400px;
+    margin: auto;
+}
+
+.vacation-mode-notice .notice.type-neutral {
+    border-color: #fff;
+}
+
+.vacation-mode-end {
+    margin-top: 1em;
+    text-align: center;
+}
+/* / VACATION MODE */
+
+/* TEMPLE REMINDER */
+.reminders {
+    top: 72px;
+    left: 152px;
+}
+
+.temple-reminder {
+    position: absolute;
+    left: 4px;
+    top: 2px;
+}
+    .temple-reminder a {
+        width: 42px;
+        height: 27px;
+        display: block;
+        background: url('../gui/village-2/step-3.png?4') 5px -318px no-repeat;
+    }
+/* / TEMPLE REMINDER */
+
+.visible {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/** FAST PROVINCE / COLONY CHANGE */
+.fast-container {
+    display: none;
+    position: absolute;
+    z-index: 20000;
+    height: 45px;
+    padding: 1px 9px 6px 5px;
+    overflow: hidden;
+    background: url('../gui/village-2/fast-provinces.png') 100% 0 no-repeat;
+}
+
+    .fast-container.two-rows {
+        height: 84px;
+        background-position: 100% -51px;
+    }
+        .fast-container br {
+            clear: left;
+        }
+    .fast-container a {
+        display: block;
+        float: left;
+        width: 32px;
+        height: 34px;
+        padding-right: 2px;
+        margin: 7px 0 -3px 0;
+        line-height: 27px;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: #170E11;
+        background: url('../gui/village-2/step-3.png?4') -103px -494px no-repeat;
+        z-index: 20001;
+    }
+    .fast-container a.current {
+        color: #AAA;
+    }
+/** FAST PROVINCE / COLONY CHANGE */
+
+
+.dotted-links {
+    text-decoration: none !important;
+    border-bottom: 1px dotted !important;
+}
+
+.dotted-links:hover {
+    text-decoration: none !important;
+    border-bottom: 1px solid !important;
+}
+
+.black-color {
+    color: #000000;
+}

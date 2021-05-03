@@ -1,0 +1,75 @@
+body {
+	background: blue;
+}
+.option {
+	width: calc((100vw - 976px) / 2 - 40px);
+	height: auto;
+	background: white;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	border: 2px solid red;
+	border-radius: 15%;
+	cursor: move;
+}
+.img {
+	width: 30%;
+	height: auto;
+	position: relative;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.wrap {
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin: 20px auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.button {
+	width: 2.4rem;
+	height: 1.2rem;
+	background-color: red;
+	position: relative;
+	border-radius: 10%;
+}
+.alarm {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+}
+.alarm p {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+}
+.button-slide {
+	height: 90%;
+	width: 40%;
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	border-radius: 10%;
+	background-color: azure;
+	transition: all 0.3s ease;
+}
+.button.active {
+	background-color: aqua;
+}
+.button.active .button-slide {
+	transform: translateX(80%);
+}
+
+
+IvanGrozni69
+IvanGrozni69
+thedwarf88.ddns.net/services/index.php?act​ion=tenmin
+prije 4 minutaIvanGrozni69
+IvanGrozni69
+https://thedwarf88.ddns.net/services/index​.php?action=tenmin

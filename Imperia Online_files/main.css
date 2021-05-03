@@ -1,0 +1,2512 @@
+@charset "UTF-8";
+
+/* === RESET === */
+html, body, ul, ol, li,
+form, fieldset, legend {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+fieldset, a img, img {
+    border: none;
+}
+li {
+    list-style: none;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+}
+input, textarea, select {
+    font-size: 110%;
+    line-height: 1.1;
+}
+
+html {
+    overflow-y: scroll;
+}
+body {
+    background-color: #3B3529;
+}
+body, th, td {
+    font-family: arial, verdana, sans-serif;
+    font-size: 87.5%;
+    color: #170E11;
+}
+.clear:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+th, td {
+    font-size: 100%;
+}
+textarea, input, select {
+    font-family: arial, verdana, sans-serif;
+}
+textarea {
+    width: 99%;
+    margin-bottom: 1em;
+    overflow: auto;
+    font-size: 0.857em;
+    border: 1px solid #372215;
+    background-color: #EDDFB9;
+}
+.header div, .tabstrip span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+legend,
+.fast-browse a,
+#current-province,
+.notice.type-neutral,
+#right-ressources,
+.header div,
+#footer a,
+#footer,
+em.badge,
+em.default,
+em.badge.default,
+.button button,
+.button a,
+.buttonInactive a,
+.buttonInactive button {
+    color: #FFF;
+}
+fieldset {
+    padding: 0.5em;
+    border: 2px solid #828177;
+}
+legend {
+    padding: 0em 0.5em;
+    font-weight: bold;
+}
+a {
+    color: #000B77;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#wrapper-top {
+    background: url("../gui/design/layout.jpg?2") no-repeat 50% -118px;
+}
+#header {
+    position: relative;
+    width: 1000px;
+    height: 118px;
+    margin: auto;
+    background: url("../gui/design/layout.jpg?2") no-repeat 50% -118px;
+}
+#wrapper-top-profile {
+    background: url("../images/homepage/gui/header.jpg") no-repeat 50%;
+}
+#header_profile {
+    position: relative;
+    width: 1000px;
+    height: 118px;
+    margin: auto;
+}
+#content {
+    background: url("../gui/design/layout.jpg?2") no-repeat 50% -236px;
+}
+#content {
+    width: 1000px;
+    height: 538px;
+    margin: auto;
+}
+
+#profile,
+#premium {
+    position: absolute;
+        top: 13px;
+    display: block;
+    width: 110px;
+    height: 21px;
+    line-height: 21px;
+    color: #FFC;
+    font-size: 0.857em;
+    font-weight: bold;
+    text-align: center;
+    background: url("../gui/design/profile-buttons.png") no-repeat;
+}
+#profile {
+    left: 333px;
+}
+#premium {
+        right: 278px;
+    background-position: 0px 100%;
+}
+#profile:hover, #premium:hover {
+    color: #CC9;
+    text-decoration: none;
+}
+
+#overlay {
+    position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 901;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+}
+.data-grid {
+    width: 100%;
+    background-color: #CCC0A0;
+}
+.data-grid th,
+.data-grid tr.faux-head td {
+    border: 1px solid #372215;
+    background-color: #C6A061;
+    color: #180C0E;
+}
+
+.data-grid td,
+.data-grid .data-grid th,
+.data-grid .data-grid td {
+    border: 1px solid #000;
+}
+.data-grid table th,
+.data-grid table td {
+    border: none;
+}
+.data-grid th a {
+    display: block;
+}
+th.numeral,
+td.numeral {
+    padding-right: 0.5em;
+    text-align: right;
+    white-space: nowrap;
+}
+.numeral2 {
+    padding-right: 0.5em;
+    font-size: 11px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* === AJAX WINDOW === */
+#dragDiv {
+    visibility: hidden;
+        top: 0;
+        z-index: 1000;
+}
+.dragme {
+    overflow: hidden;
+    cursor: move;
+}
+
+/* === SLIDER === */
+.slider-holder {
+    width: 100%;
+}
+.slider-holder td {
+    height: 33px;
+    padding: 0 !important;
+    vertical-align: middle;
+}
+.slider-value,
+.slider-value input,
+.slider-max {
+    width: 50px;
+}
+.slider-value {
+    text-align: right;
+}
+.slider-value input {
+    font-size: 8pt;
+    text-align: left;
+}
+.slider-head, .slider-foot {
+    width: 30px;
+    cursor: pointer;
+}
+.slider-head div,
+.slider-foot div {
+    padding: 9px 0px;
+    background: url("../gui/slider.png") no-repeat 3px 0px;
+}
+.slider-foot div    { background-position: -7px -88px; }
+.slider-background  { background: #FFF url("../gui/slider.png") repeat-x 0px -73px; }
+.dynamic-slider-control {
+    position: relative;
+    cursor: default;
+        -moz-user-focus: normal;
+        -moz-user-select: none;
+}
+.horizontal {
+    height: 15px;
+    margin-top: 2px;
+}
+.dynamic-slider-control input {
+    display: none;
+}
+.dynamic-slider-control .handle {
+    position: absolute;
+    width: 11px;
+    height: 15px;
+    padding: 5px 0px;
+    background: url("../gui/slider.png") no-repeat 0px -33px;
+    cursor: e-resize;
+        -moz-user-select: none;
+}
+.dynamic-slider-control.horizontal .handle div {
+    display: none;
+}
+.dynamic-slider-control .line {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+}
+.dynamic-slider-control .line2 {
+    float: left;
+    height: 15px;
+    background: url("../gui/slider.png") repeat-x 0px -58px;
+}
+
+.forum_quote {
+    padding: 5px;
+    background-color: gray;
+}
+.hilighted {
+    background-color: gray;
+}
+.big-font {
+    font-size: 1.5em !important;
+}
+.emphasized {
+    font-weight: bold !important;
+}
+
+/* === TABSTRIP === */
+.tabstrip {
+    overflow: hidden;
+    margin-bottom: -1px;
+    padding: 10px 0.5em 0px;
+}
+.tabstrip-content {
+    min-height: 50px;
+    padding: 1em 0.5em 0.5em;
+    border-top: 1px solid #221F19;
+}
+.tabstrip-content,
+.untabbed .ajax-content-wrapper,
+.fullwidth .ajax-content-wrapper {
+    background-color: #C3B18B;
+}
+.fullwidth .ajax-content-wrapper {
+    padding-top: 5px;
+}
+.tabstrip li {
+    float: left;
+    background-color: #A8854F;
+}
+.tabstrip li.disabled {
+    background-color: #7D7161;
+}
+.tabstrip .active,
+.tabstrip li.disabled.active {
+    background-color: #C3B18B;
+}
+.tabstrip .first {
+    padding-left: 9px;
+    background-image: url("../gui/ajax/v2/tabs.png");
+    background-repeat: no-repeat;
+    background-position: 0px -150px;
+}
+.tabstrip .last {
+    padding-right: 9px;
+    background-image: url("../gui/ajax/v2/tabs.png");
+    background-repeat: no-repeat;
+    background-position: 100% -150px;
+}
+.tabstrip .first.active { background-position: 0px -120px; }
+.tabstrip .last.active  { background-position: 100% -120px; }
+.tabstrip a {
+    display: block;
+    min-width: 80px;
+    padding-left: 17px;
+    color: #241E14;
+    text-decoration: none;
+    text-align: center;
+    background: url("../gui/ajax/v2/tabs.png") no-repeat 0px -90px;
+    outline: none;
+}
+.tabstrip a span {
+    position: relative;
+    display: block;
+    line-height: 25px;
+    padding-right: 17px;
+    background-image: url("../gui/ajax/v2/tabs.png");
+    background-repeat: no-repeat;
+    background-position: 100% -30px;
+    white-space: nowrap;
+}
+.tabstrip .active a {
+    color: #020202;
+    background-position: 0px 0px;
+}
+.tabstrip .active span      { background-position: 100% 0px; }
+.tabstrip .first.active a   { background-position: 0px 0px; }
+.tabstrip .first a          { background-position: 0px -30px; }
+.tabstrip .preactive a span { background-position: 100% -60px; }
+.tabstrip .postactive a     { background-position: 0px -60px; }
+.tabstrip .disabled a {
+    cursor: default;
+}
+
+/* === BADGES === */
+.tabstrip a span em.badge {
+    right: 5px;
+    top: -10px;
+}
+.tabstrip .disabled a span em {
+    color: inherit;
+}
+em.badge,
+em.default,
+em.badge.default {
+    position: absolute;
+    display: block;
+    font-size: 11px;
+    font-style: normal;
+    text-align: center;
+}
+em.badge.default b,
+em.badge.default u,
+em.badge.default i {
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    background: url("../gui/ajax/v2/badge.png") 0px 0px;
+}
+em.badge.default b {
+    margin: 0;
+    font-weight: bold;
+    background-position: 0px 100%;
+}
+em.badge.default u,
+em.badge.default i {
+    position: absolute;
+       top: 0;
+    width: 8px;
+}
+em.badge.default u {
+    left: -8px;
+    background-position: 100% 0px;
+}
+em.badge.default i {
+    right: -8px;
+}
+.badge-holder {
+    position: relative;
+    display: block;
+    float: left;
+    clear: right;
+    height: 26px;
+    width: 26px;
+    margin-left: 0.5em;
+    text-decoration: none;
+}
+.badge-holder .badge {
+    top: -5px;
+    right: -5px;
+}
+#intruder-alarm .badge {
+    top: 0;
+    right: 0;
+}
+#province-incoming-combined .badge,
+#castle-incoming-combined .badge {
+    top: -5px;
+    right: 5px;
+}
+
+/* === NOTICES === */
+.notice-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.notice {
+    margin: 0.5em auto;
+    padding: 15px 20px 15px 70px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.notice.type-positive {
+    background: #A9BC74 url("../gui/ajax/v2/notice-positive.png") no-repeat left 8px;
+    border-color: #8B9B60;
+}
+.notice.type-neutral {
+    background: #B1A792 url("../gui/ajax/v2/notice-neutral.png") no-repeat left 8px;
+    border-color: #968E7C;
+}
+.notice.type-negative {
+    background: #BC8F74 url("../gui/ajax/v2/notice-negative.png") no-repeat left 8px;
+    border-color: #A07A63;
+}
+.notice.type-question {
+    background: #BC9774 url("../gui/ajax/v2/notice-question.png") no-repeat left 8px;
+    border-color: #987A5E;
+}
+.notice-wrapper .notice h6 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.positive               { color: #215D35 !important; }
+.negative               { color: #A00000 !important; }
+.negative-population    { color: #FF8C00 !important; }
+.warning                { color: #C8B144 !important; }
+
+/* ===LOCALE SELECT === */
+.pretty-select {
+    position: relative;
+    line-height: 17px;
+    text-align: left;
+    direction: ltr;
+}
+.pretty-select,
+.pretty-select ul,
+.currently-selected {
+    width: 175px;
+}
+.pretty-select a {
+    display: block;
+    color: #5B3021;
+    font-size: 12px;
+    font-weight: normal;
+}
+.pretty-select a:hover {
+    text-decoration: none;
+}
+.pretty-select .flag {
+    width: 18px;
+    height: 12px;
+    margin: 3px 2px;
+    vertical-align: top;
+    background-image: url("../gui/flag-matrix.png");
+    background-repeat: no-repeat;
+}
+.currently-selected {
+    position: relative;
+        z-index: 101;
+    display: block;
+    width: 175px;
+    line-height: 23px;
+    font-weight: normal;
+    background: url("../gui/village-2/step-3.png?4") no-repeat 0px -574px;
+}
+.currently-selected .flag {
+    margin-top: 6px;
+    margin-left: 7px;
+}
+.currently-selected em {
+    display: block;
+    font-style: normal;
+}
+.currently-selected em.opened {
+    background: url("../gui/village-2/step-3.png?4") no-repeat 145px -536px;
+}
+.footer-langs .pretty-select a.currently-selected em img {
+    float: left;
+}
+.pretty-select ul {
+    position: absolute;
+        left: -1px;
+        bottom: 23px;
+        z-index: 100;
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #000;
+    background-color: #C3B18B;
+}
+.footer-langs .pretty-select ul {
+    max-height: 645px;
+    overflow-y: auto;
+}
+.pretty-select.slide-down ul {
+        bottom: auto;
+        top: 16px;
+    height: 306px;
+    overflow-x: hidden;
+}
+.pretty-select li {
+    display: block;
+}
+.pretty-select li a:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: #5B3021;
+}
+#locale-ac .flag, .locale-ac .flag { background-position: 0px -24px; }
+#locale-ad .flag, .locale-ad .flag { background-position: 0px -36px; }
+#locale-ae .flag, .locale-ae .flag { background-position: 0px -48px; }
+#locale-af .flag, .locale-af .flag { background-position: 0px -60px; }
+#locale-ag .flag, .locale-ag .flag { background-position: 0px -72px; }
+#locale-ai .flag, .locale-ai .flag { background-position: 0px -96px; }
+#locale-al .flag, .locale-al .flag { background-position: 0px -132px; }
+#locale-am .flag, .locale-am .flag { background-position: 0px -144px; }
+#locale-an .flag, .locale-an .flag { background-position: 0px -156px; }
+#locale-ao .flag, .locale-ao .flag { background-position: 0px -168px; }
+#locale-aq .flag, .locale-aq .flag { background-position: 0px -192px; }
+#locale-ar .flag, .locale-ar .flag { background-position: 0px -204px; }
+#locale-as .flag, .locale-as .flag { background-position: 0px -216px; }
+#locale-at .flag, .locale-at .flag { background-position: 0px -228px; }
+#locale-au .flag, .locale-au .flag { background-position: 0px -240px; }
+#locale-aw .flag, .locale-aw .flag { background-position: 0px -264px; }
+#locale-ax .flag, .locale-ax .flag { background-position: 0px -276px; }
+#locale-az .flag, .locale-az .flag { background-position: 0px -300px; }
+#locale-ba .flag, .locale-ba .flag { background-position: -18px 0px; }
+#locale-bb .flag, .locale-bb .flag { background-position: -18px -12px; }
+#locale-bd .flag, .locale-bd .flag { background-position: -18px -36px; }
+#locale-be .flag, .locale-be .flag { background-position: -18px -48px; }
+#locale-bf .flag, .locale-bf .flag { background-position: -18px -60px; }
+#locale-bg .flag, .locale-bg .flag { background-position: -18px -72px; }
+#locale-bh .flag, .locale-bh .flag { background-position: -18px -84px; }
+#locale-bi .flag, .locale-bi .flag { background-position: -18px -96px; }
+#locale-bj .flag, .locale-bj .flag { background-position: -18px -108px; }
+#locale-bm .flag, .locale-bm .flag { background-position: -18px -144px; }
+#locale-bn .flag, .locale-bn .flag { background-position: -18px -156px; }
+#locale-bo .flag, .locale-bo .flag { background-position: -18px -168px; }
+#locale-br .flag, .locale-br .flag,
+#locale-br2.flag, .locale-br2.flag { background-position: -18px -204px; }
+#locale-bs .flag, .locale-bs .flag { background-position: -18px -216px; }
+#locale-bt .flag, .locale-bt .flag { background-position: -18px -228px; }
+#locale-bv .flag, .locale-bv .flag { background-position: -18px -252px; }
+#locale-bw .flag, .locale-bw .flag { background-position: -18px -264px; }
+#locale-by .flag, .locale-by .flag { background-position: -18px -288px; }
+#locale-bz .flag, .locale-bz .flag { background-position: -18px -300px; }
+#locale-ca .flag, .locale-ca .flag { background-position: -36px 0px; }
+#locale-cc .flag, .locale-cc .flag { background-position: -36px -24px; }
+#locale-cd .flag, .locale-cd .flag { background-position: -36px -36px; }
+#locale-cf .flag, .locale-cf .flag { background-position: -36px -60px; }
+#locale-cg .flag, .locale-cg .flag { background-position: -36px -72px; }
+#locale-ch .flag, .locale-ch .flag { background-position: -36px -84px; }
+#locale-ci .flag, .locale-ci .flag { background-position: -36px -96px; }
+#locale-ck .flag, .locale-ck .flag { background-position: -36px -120px; }
+#locale-cl .flag, .locale-cl .flag { background-position: -36px -132px; }
+#locale-cm .flag, .locale-cm .flag { background-position: -36px -144px; }
+#locale-cn .flag, .locale-cn .flag { background-position: -36px -156px; }
+#locale-co .flag, .locale-co .flag { background-position: -36px -168px; }
+#locale-cp .flag, .locale-cp .flag { background-position: -36px -180px; }
+#locale-cr .flag, .locale-cr .flag { background-position: -36px -204px; }
+#locale-cs .flag, .locale-cs .flag { background-position: -36px -216px; }
+#locale-cu .flag, .locale-cu .flag { background-position: -36px -240px; }
+#locale-cv .flag, .locale-cv .flag { background-position: -36px -252px; }
+#locale-cx .flag, .locale-cx .flag { background-position: -36px -276px; }
+#locale-cy .flag, .locale-cy .flag { background-position: -36px -288px; }
+#locale-cz .flag, .locale-cz .flag { background-position: -36px -300px; }
+#locale-de .flag, .locale-de .flag { background-position: -54px -48px; }
+#locale-dg .flag, .locale-dg .flag { background-position: -54px -72px; }
+#locale-dj .flag, .locale-dj .flag { background-position: -54px -108px; }
+#locale-dk .flag, .locale-dk .flag { background-position: -54px -120px; }
+#locale-dm .flag, .locale-dm .flag { background-position: -54px -144px; }
+#locale-do .flag, .locale-do .flag { background-position: -54px -168px; }
+#locale-dz .flag, .locale-dz .flag { background-position: -54px -300px; }
+#locale-ea .flag, .locale-ea .flag { background-position: -72px 0px; }
+#locale-ec .flag, .locale-ec .flag { background-position: -72px -24px; }
+#locale-ee .flag, .locale-ee .flag { background-position: -72px -48px; }
+#locale-eg .flag, .locale-eg .flag { background-position: -72px -72px; }
+#locale-eh .flag, .locale-eh .flag { background-position: -72px -84px; }
+#locale-er .flag, .locale-er .flag { background-position: -72px -204px; }
+#locale-es .flag, .locale-es .flag { background-position: -72px -216px; }
+#locale-et .flag, .locale-et .flag { background-position: -72px -228px; }
+#locale-eu .flag, .locale-eu .flag { background-position: -72px -240px; }
+#locale-fi .flag, .locale-fi .flag { background-position: -90px -96px; }
+#locale-fj .flag, .locale-fj .flag { background-position: -90px -108px; }
+#locale-fk .flag, .locale-fk .flag { background-position: -90px -120px; }
+#locale-fm .flag, .locale-fm .flag { background-position: -90px -144px; }
+#locale-fo .flag, .locale-fo .flag { background-position: -90px -168px; }
+#locale-fr .flag, .locale-fr .flag { background-position: -90px -204px; }
+#locale-fx .flag, .locale-fx .flag { background-position: -90px -276px; }
+#locale-ga .flag, .locale-ga .flag { background-position: -108px 0px; }
+#locale-en .flag, .locale-en .flag,
+#locale-gb .flag, .locale-gb .flag { background-position: -108px -12px; }
+#locale-gd .flag, .locale-gd .flag { background-position: -108px -36px; }
+#locale-ge .flag, .locale-ge .flag { background-position: -108px -48px; }
+#locale-gf .flag, .locale-gf .flag { background-position: -108px -60px; }
+#locale-gg .flag, .locale-gg .flag { background-position: -108px -72px; }
+#locale-gh .flag, .locale-gh .flag { background-position: -108px -84px; }
+#locale-gi .flag, .locale-gi .flag { background-position: -108px -96px; }
+#locale-gl .flag, .locale-gl .flag { background-position: -108px -132px; }
+#locale-gm .flag, .locale-gm .flag { background-position: -108px -144px; }
+#locale-gn .flag, .locale-gn .flag { background-position: -108px -156px; }
+#locale-gp .flag, .locale-gp .flag { background-position: -108px -180px; }
+#locale-gq .flag, .locale-gq .flag { background-position: -108px -192px; }
+#locale-gr .flag, .locale-gr .flag { background-position: -108px -204px; }
+#locale-gs .flag, .locale-gs .flag { background-position: -108px -216px; }
+#locale-gt .flag, .locale-gt .flag { background-position: -108px -228px; }
+#locale-gu .flag, .locale-gu .flag { background-position: -108px -240px; }
+#locale-gw .flag, .locale-gw .flag { background-position: -108px -264px; }
+#locale-gy .flag, .locale-gy .flag { background-position: -108px -288px; }
+#locale-hk .flag, .locale-hk .flag { background-position: -126px -120px; }
+#locale-hm .flag, .locale-hm .flag { background-position: -126px -144px; }
+#locale-hn .flag, .locale-hn .flag { background-position: -126px -156px; }
+#locale-hr .flag, .locale-hr .flag { background-position: -126px -204px; }
+#locale-ht .flag, .locale-ht .flag { background-position: -126px -228px; }
+#locale-hu .flag, .locale-hu .flag { background-position: -126px -240px; }
+#locale-ic .flag, .locale-ic .flag { background-position: -144px -24px; }
+#locale-id .flag, .locale-id .flag { background-position: -144px -36px; }
+#locale-ie .flag, .locale-ie .flag { background-position: -144px -48px; }
+#locale-il .flag, .locale-il .flag { background-position: -144px -132px; }
+#locale-im .flag, .locale-im .flag { background-position: -144px -144px; }
+#locale-in .flag, .locale-in .flag { background-position: -144px -156px; }
+#locale-io .flag, .locale-io .flag { background-position: -144px -168px; }
+#locale-iq .flag, .locale-iq .flag { background-position: -144px -192px; }
+#locale-ir .flag, .locale-ir .flag,
+#locale-fa2 .flag, .locale-fa2 .flag { background-position: -144px -204px; }
+#locale-is .flag, .locale-is .flag { background-position: -144px -216px; }
+#locale-it .flag, .locale-it .flag { background-position: -144px -228px; }
+#locale-je .flag, .locale-je .flag { background-position: -162px -48px; }
+#locale-jm .flag, .locale-jm .flag { background-position: -162px -144px; }
+#locale-jo .flag, .locale-jo .flag { background-position: -162px -168px; }
+#locale-jp .flag, .locale-jp .flag { background-position: -162px -180px; }
+#locale-ke .flag, .locale-ke .flag { background-position: -180px -48px; }
+#locale-kg .flag, .locale-kg .flag { background-position: -180px -72px; }
+#locale-kh .flag, .locale-kh .flag { background-position: -180px -84px; }
+#locale-ki .flag, .locale-ki .flag { background-position: -180px -96px; }
+#locale-km .flag, .locale-km .flag { background-position: -180px -144px; }
+#locale-kn .flag, .locale-kn .flag { background-position: -180px -156px; }
+#locale-kp .flag, .locale-kp .flag { background-position: -180px -180px; }
+#locale-kr .flag, .locale-kr .flag { background-position: -180px -204px; }
+#locale-kw .flag, .locale-kw .flag { background-position: -180px -264px; }
+#locale-ky .flag, .locale-ky .flag { background-position: -180px -288px; }
+#locale-kz .flag, .locale-kz .flag { background-position: -180px -300px; }
+#locale-la .flag, .locale-la .flag { background-position: -198px 0px; }
+#locale-lb .flag, .locale-lb .flag { background-position: -198px -12px; }
+#locale-lc .flag, .locale-lc .flag { background-position: -198px -24px; }
+#locale-li .flag, .locale-li .flag { background-position: -198px -96px; }
+#locale-lk .flag, .locale-lk .flag { background-position: -198px -120px; }
+#locale-lr .flag, .locale-lr .flag { background-position: -198px -204px; }
+#locale-ls .flag, .locale-ls .flag { background-position: -198px -216px; }
+#locale-lt .flag, .locale-lt .flag { background-position: -198px -228px; }
+#locale-lu .flag, .locale-lu .flag { background-position: -198px -240px; }
+#locale-lv .flag, .locale-lv .flag { background-position: -198px -252px; }
+#locale-ly .flag, .locale-ly .flag { background-position: -198px -288px; }
+#locale-ma .flag, .locale-ma .flag { background-position: -216px 0px; }
+#locale-mc .flag, .locale-mc .flag { background-position: -216px -24px; }
+#locale-md .flag, .locale-md .flag { background-position: -216px -36px; }
+#locale-me .flag, .locale-me .flag { background-position: -216px -48px; }
+#locale-mg .flag, .locale-mg .flag { background-position: -216px -72px; }
+#locale-mh .flag, .locale-mh .flag { background-position: -216px -84px; }
+#locale-mk .flag, .locale-mk .flag { background-position: -216px -120px; }
+#locale-ml .flag, .locale-ml .flag { background-position: -216px -132px; }
+#locale-mm .flag, .locale-mm .flag { background-position: -216px -144px; }
+#locale-mn .flag, .locale-mn .flag { background-position: -216px -156px; }
+#locale-mo .flag, .locale-mo .flag { background-position: -216px -168px; }
+#locale-mp .flag, .locale-mp .flag { background-position: -216px -180px; }
+#locale-mq .flag, .locale-mq .flag { background-position: -216px -192px; }
+#locale-mr .flag, .locale-mr .flag { background-position: -216px -204px; }
+#locale-ms .flag, .locale-ms .flag { background-position: -216px -216px; }
+#locale-mt .flag, .locale-mt .flag { background-position: -216px -228px; }
+#locale-mu .flag, .locale-mu .flag { background-position: -216px -240px; }
+#locale-mv .flag, .locale-mv .flag { background-position: -216px -252px; }
+#locale-mw .flag, .locale-mw .flag { background-position: -216px -264px; }
+#locale-mx .flag, .locale-mx .flag { background-position: -216px -276px; }
+#locale-my .flag, .locale-my .flag { background-position: -216px -288px; }
+#locale-mz .flag, .locale-mz .flag { background-position: -216px -300px; }
+#locale-na .flag, .locale-na .flag { background-position: -234px 0px; }
+#locale-nc .flag, .locale-nc .flag { background-position: -234px -24px; }
+#locale-ne .flag, .locale-ne .flag { background-position: -234px -48px; }
+#locale-nf .flag, .locale-nf .flag { background-position: -234px -60px; }
+#locale-ng .flag, .locale-ng .flag { background-position: -234px -72px; }
+#locale-ni .flag, .locale-ni .flag { background-position: -234px -96px; }
+#locale-nl .flag, .locale-nl .flag { background-position: -234px -132px; }
+#locale-no .flag, .locale-no .flag { background-position: -234px -168px; }
+#locale-np .flag, .locale-np .flag { background-position: -234px -180px; }
+#locale-nr .flag, .locale-nr .flag { background-position: -234px -204px; }
+#locale-nu .flag, .locale-nu .flag { background-position: -234px -240px; }
+#locale-nz .flag, .locale-nz .flag { background-position: -234px -300px; }
+#locale-om .flag, .locale-om .flag { background-position: -252px -144px; }
+#locale-pa .flag, .locale-pa .flag { background-position: -270px 0px; }
+#locale-pe .flag, .locale-pe .flag { background-position: -270px -48px; }
+#locale-pf .flag, .locale-pf .flag { background-position: -270px -60px; }
+#locale-pg .flag, .locale-pg .flag { background-position: -270px -72px; }
+#locale-ph .flag, .locale-ph .flag { background-position: -270px -84px; }
+#locale-pk .flag, .locale-pk .flag { background-position: -270px -120px; }
+#locale-pl .flag, .locale-pl .flag { background-position: -270px -132px; }
+#locale-pm .flag, .locale-pm .flag { background-position: -270px -144px; }
+#locale-pn .flag, .locale-pn .flag { background-position: -270px -156px; }
+#locale-pr .flag, .locale-pr .flag { background-position: -270px -204px; }
+#locale-ps .flag, .locale-ps .flag { background-position: -270px -216px; }
+#locale-pt .flag, .locale-pt .flag { background-position: -270px -228px; }
+#locale-pw .flag, .locale-pw .flag { background-position: -270px -264px; }
+#locale-py .flag, .locale-py .flag { background-position: -270px -288px; }
+#locale-qa .flag, .locale-qa .flag { background-position: -288px 0px; }
+#locale-re .flag, .locale-re .flag { background-position: -306px -48px; }
+#locale-ro .flag, .locale-ro .flag { background-position: -306px -168px; }
+#locale-rs .flag, .locale-rs .flag { background-position: -306px -216px; }
+#locale-ru .flag, .locale-ru .flag { background-position: -306px -240px; }
+#locale-rw .flag, .locale-rw .flag { background-position: -306px -264px; }
+#locale-sa .flag, .locale-sa .flag { background-position: -324px 0px; }
+#locale-sb .flag, .locale-sb .flag { background-position: -324px -12px; }
+#locale-sc .flag, .locale-sc .flag { background-position: -324px -24px; }
+#locale-sd .flag, .locale-sd .flag { background-position: -324px -36px; }
+#locale-se .flag, .locale-se .flag { background-position: -324px -48px; }
+#locale-sg .flag, .locale-sg .flag { background-position: -324px -72px; }
+#locale-sh .flag, .locale-sh .flag { background-position: -324px -84px; }
+#locale-si .flag, .locale-si .flag { background-position: -324px -96px; }
+#locale-sj .flag, .locale-sj .flag { background-position: -324px -108px; }
+#locale-sk .flag, .locale-sk .flag { background-position: -324px -120px; }
+#locale-sl .flag, .locale-sl .flag { background-position: -324px -132px; }
+#locale-sm .flag, .locale-sm .flag { background-position: -324px -144px; }
+#locale-sn .flag, .locale-sn .flag { background-position: -324px -156px; }
+#locale-so .flag, .locale-so .flag { background-position: -324px -168px; }
+#locale-sr .flag, .locale-sr .flag { background-position: -324px -204px; }
+#locale-st .flag, .locale-st .flag { background-position: -324px -228px; }
+#locale-sv .flag, .locale-sv .flag { background-position: -324px -252px; }
+#locale-sy .flag, .locale-sy .flag { background-position: -324px -288px; }
+#locale-sz .flag, .locale-sz .flag { background-position: -324px -300px; }
+#locale-ta .flag, .locale-ta .flag { background-position: -342px 0px; }
+#locale-tc .flag, .locale-tc .flag { background-position: -342px -24px; }
+#locale-td .flag, .locale-td .flag { background-position: -342px -36px; }
+#locale-tf .flag, .locale-tf .flag { background-position: -342px -60px; }
+#locale-tg .flag, .locale-tg .flag { background-position: -342px -72px; }
+#locale-th .flag, .locale-th .flag { background-position: -342px -84px; }
+#locale-tj .flag, .locale-tj .flag { background-position: -342px -108px; }
+#locale-tk .flag, .locale-tk .flag { background-position: -342px -120px; }
+#locale-tl .flag, .locale-tl .flag { background-position: -342px -132px; }
+#locale-tm .flag, .locale-tm .flag { background-position: -342px -144px; }
+#locale-tn .flag, .locale-tn .flag { background-position: -342px -156px; }
+#locale-to .flag, .locale-to .flag { background-position: -342px -168px; }
+#locale-tp .flag, .locale-tp .flag { background-position: -342px -180px; }
+#locale-tr .flag, .locale-tr .flag { background-position: -342px -204px; }
+#locale-tt .flag, .locale-tt .flag { background-position: -342px -228px; }
+#locale-tv .flag, .locale-tv .flag { background-position: -342px -252px; }
+#locale-tw .flag, .locale-tw .flag { background-position: -342px -264px; }
+#locale-tz .flag, .locale-tz .flag { background-position: -342px -300px; }
+#locale-ua .flag, .locale-ua .flag { background-position: -360px 0px; }
+#locale-ug .flag, .locale-ug .flag { background-position: -360px -72px; }
+#locale-uk .flag, .locale-uk .flag { background-position: -360px -120px; }
+#locale-um .flag, .locale-um .flag { background-position: -360px -144px; }
+#locale-us .flag, .locale-us .flag { background-position: -360px -216px; }
+#locale-uy .flag, .locale-uy .flag { background-position: -360px -288px; }
+#locale-uz .flag, .locale-uz .flag { background-position: -360px -300px; }
+#locale-va .flag, .locale-va .flag { background-position: -378px 0px; }
+#locale-vc .flag, .locale-vc .flag { background-position: -378px -24px; }
+#locale-ve .flag, .locale-ve .flag { background-position: -378px -48px; }
+#locale-vg .flag, .locale-vg .flag { background-position: -378px -72px; }
+#locale-vi .flag, .locale-vi .flag { background-position: -378px -96px; }
+#locale-vn .flag, .locale-vn .flag { background-position: -378px -156px; }
+#locale-vu .flag, .locale-vu .flag { background-position: -378px -240px; }
+#locale-wf .flag, .locale-wf .flag { background-position: -396px -60px; }
+#locale-ws .flag, .locale-ws .flag { background-position: -396px -216px; }
+#locale-ye .flag, .locale-ye .flag { background-position: -432px -48px; }
+#locale-yt .flag, .locale-yt .flag { background-position: -432px -228px; }
+#locale-yu .flag, .locale-yu .flag { background-position: -432px -240px; }
+#locale-za .flag, .locale-za .flag { background-position: -450px 0px; }
+#locale-zm .flag, .locale-zm .flag { background-position: -450px -144px; }
+#locale-zr .flag, .locale-zr .flag { background-position: -450px -204px; }
+#locale-zw .flag, .locale-zw .flag { background-position: -450px -264px; }
+
+.tooltip {
+    display: none;
+}
+
+#email-actions {
+    width: 164px;
+}
+.email-headers {
+    line-height: 28px;
+    padding-left: 1em;
+}
+#email-content {
+    padding: 1em;
+}
+
+/* === BUTTON === */
+.button,
+.buttonInactive {
+    position: relative;
+        top: 0;
+        left: 0;
+    display: inline-block;
+    height: 27px;
+    padding: 0px 6px;
+    vertical-align: bottom;
+}
+.button button,
+.button a,
+.buttonInactive button,
+.buttonInactive a {
+    display: block;
+    min-width: 110px;
+    height: 27px;
+    line-height: 27px;
+    margin: 0;
+    padding: 0 !important;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    background: url("../gui/ajax/v2/button.png") repeat-x 0px -27px;
+    cursor: pointer;
+}
+.buttonInactive button,
+.buttonInactive a  {
+    cursor: auto;
+}
+.button i,
+.button em,
+.buttonInactive i,
+.buttonInactive em {
+    position: absolute;
+        top: 0;
+    display: block;
+    width: 6px;
+    height: 27px;
+    background: url("../gui/ajax/v2/button.png") no-repeat;
+}
+.visual-loading-holder {
+    height: 27px;
+    line-height: 27px;
+}
+.button em,
+.buttonInactive em {
+       left: 0;
+    background-position: -6px 0px;
+}
+.button i,
+.buttonInactive i {
+        right: 0;
+    background-position: 0px 0px;
+}
+.buttonInactive a,
+.buttonInactive button,
+.buttonInactive button:active,
+.buttonInactive .button a:active {
+    background-position: 0px -135px;
+}
+.buttonInactive i,
+.buttonInactive button:active i,
+.buttonInactive .button a:active i {
+    background-position: 0px -108px;
+}
+.buttonInactive em,
+.buttonInactive button:active em,
+.buttonInactive .button a:active em {
+    background-position: -6px -108px;
+}
+.button button:active,
+.button a:active {
+    background-position: 0px -81px;
+}
+button:active i,
+.button a:active i {
+    background-position: 0px -54px;
+}
+button:active em,
+.button a:active em {
+    background-position: -6px -54px;
+}
+#choose-race {
+    width: 946px;
+    margin: 0px auto;
+    background: #000 url("../gui/design/choose-race.jpg") no-repeat 50% -462px;
+}
+#choose-race.arabic-race { background: #000 url("../gui/design/choose-race_T.jpg") no-repeat 50% -462px; }
+.race {
+    position: relative;
+    float: left;
+    width: 444px;
+    height: 463px;
+    margin-top: 63px;
+    background-image: url("../gui/design/choose-race.jpg");
+}
+.arabic-race .race { background-image: url("../gui/design/choose-race_T.jpg"); }
+#choose-nomad {
+    float: right;
+    background-position: -444px 0px;
+}
+#choose-race h1 {
+    position: absolute;
+        top: -29px;
+        left: 0;
+    width: 444px;
+    padding: 0;
+    color: #000;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: #FFF 0px 0px 5px;
+}
+#choose-race .hq {
+    position: absolute;
+       top: -14px;
+    width: 150px;
+    height: 99px;
+    background-image: url("../gui/design/choose-race.jpg");
+}
+#choose-race.arabic-race .hq { background-image: url("../gui/design/choose-race_T.jpg"); }
+#choose-imperial .hq {
+       right: -14px;
+    background-position: -888px 0px;
+}
+#choose-nomad .hq {
+       left: -14px;
+    background-position: -888px -99px;
+}
+#choose-race form div {
+    position: absolute;
+       bottom: -40px;
+       left: 0;
+    width: 444px;
+    text-align: center;
+}
+#choose-race button {
+    width: 150px;
+}
+.rankings {
+    width: 940px;
+}
+.rankings td,
+.rankings th {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.rankings th,
+.rankings td {
+    height: 26px;
+    padding: 0px 3px;
+}
+.rankings img {
+    vertical-align: middle;
+}
+.rankings .numeral img {
+    margin-left: 0.2em;
+}
+.rankings .rank,
+.espy .rank {
+    text-align: center;
+}
+.guilds-timer {
+    line-height: 24px;
+}
+.thoughtless,
+.minded,
+.stats-icon img {
+    width: 19px;
+    height: 19px;
+    margin-right: 0.2em;
+}
+.thoughtless, .minded {
+    margin: 0;
+}
+.minded { background: url("../gui/stats-icons.png?5") no-repeat -54px 0px; }
+.stats-icon img { background-image: url("../gui/stats-icons.png?5"); }
+.stats-operations-icon a,
+.alliance_operations a {
+    margin: 0;
+    background: url("../gui/operations-icons.png?5") no-repeat;
+}
+.operations-image {
+    display: inline-block;
+    width: 28px;
+    height: 31px;
+    background: url("../gui/operations-icons.png?4") no-repeat 0px 0px;
+}
+ a.operations-image.alliance_operations {
+    display: block;
+    margin: 0px auto !important;
+}
+.stats-operations-icon .show-alliance-on-map    { background-position: 3px -328px; }
+.stats-operations-icon .guild-invite            { background-position: 3px -202px; }
+.stats-icon .placeholder                        { background-image: none; }
+.stats-icon .stats-race-1                       { background-position: 0px -36px; }
+.stats-icon .stats-user-in-mod                  { background-position: 0px -54px; }
+.stats-icon .stats-holiday-protection           { background-position: 0px -72px; }
+.stats-icon .show-alliance-on-map               { background-position: -18px 0px; }
+.stats-icon .send-message                       { background-position: -18px -18px; }
+.stats-icon .stats-race-2                       { background-position: -18px -36px; }
+.stats-icon .stats-user-is-silenced             { background-position: -18px -72px; }
+.stats-icon .guild-invite                       { background-position: -36px 0px; }
+.stats-icon .befriend                           { background-position: -36px -18px; }
+.stats-icon .stats-user-is-punished             { background-position: -36px -36px; }
+.stats-icon .stats-beginners-protection         { background-position: -36px -54px; }
+.stats-icon .stats-user-capitulated             { background-position: -54px -18px; }
+.stats-icon .nomads-boost                       { background-position: -36px -72px; }
+.stats-icon .stats-user-is-blocked              { background-position: -54px -36px; }
+.stats-icon .send-gift                          { background-position: -54px -54px; }
+.stats-icon .delete                             { background-position: -54px -72px; }
+.stats-actions {
+    width: 70px;
+    text-align: center;
+}
+.arabic .stats-icon .stats-race-1,
+.arabic .stats-icon .stats-race-2 {
+    background-position: 0px -90px;
+}
+#stats-home-row {
+    background-color: #FFE8B4;
+}
+#stats-search-home-row {
+    background-color: #FFC96D;
+}
+table.stats-tooltip {
+    width: 100%;
+}
+table.stats-tooltip {
+    width: 100%;
+}
+table.stats-tooltip th {
+    font-weight: bold;
+    text-align: center;
+}
+table.stats-tooltip th,
+table.stats-tooltip td {
+    padding: 0em 0.2em;
+    font-size: 1.1em;
+}
+table.stats-tooltip th div {
+    margin-bottom: 0.5em;
+    font-size: 90%;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+#stats-search {
+    width: 165px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 1em;
+    vertical-align: middle;
+}
+#spy-search-filter,
+#stats-search-filter {
+    float: left;
+    width: 11em;
+    margin: 0;
+    font-size: 0.857em;
+}
+#stats-search-button {
+    width: 19px;
+    height: 19px;
+    margin-left: 0.214em;
+    background: url("../gui/stats-icons.png?5") 0px -18px;
+}
+
+.current-page {
+    color: #000;
+}
+.inactive-page {
+    color: #393020;
+}
+#right-menu-background {
+    position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 110;
+}
+#right-menu-background div {
+    position: absolute;
+        right: 0;
+    background: url("../gui/menu-right-bg.png") no-repeat;
+}
+#right-menu-background #right-menu-top {
+       top: 0;
+    width: 222px;
+    height: 93px;
+    background-position: 0px 0px;
+}
+#right-menu-background #right-menu-right {
+       top: 48px;
+    width: 57px;
+    height: 122px;
+    background-position: -165px -48px;
+}
+.slogan {
+    height: 2em;
+    line-height: 2em;
+    color: #3D0000;
+    font-size: 0.714em;
+}
+.army-fortress {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../gui/army-fortress.png?1") no-repeat;
+}
+.army-fortress.move-in { background-position: -29px 0px; }
+.army-fortress.move-out { background-position: 0px 0px; }
+.unit,
+.army-fortress,
+.resource-40 {
+    border: 1px solid #2C271C;
+}
+
+/* === UNITS SPRITE === */
+.unit,
+.price,
+.resource-40 {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.unit.inline,
+.price.inline {
+    float: left;
+    margin-right: 0.4em;
+}
+.race-1 { background: url("../images/units/42x42/1.png") no-repeat; }
+.race-2 { background: url("../images/units/42x42/2.png") no-repeat; }
+.race-1.unit-c1, .race-2.unit-c1 { background-position: 0px 0px; }
+.race-1.unit-c2, .race-2.unit-c2 { background-position: -39px 0px; }
+.race-1.unit-c3, .race-2.unit-c3 { background-position: -78px 0px; }
+.race-1.unit-c4, .race-2.unit-c4 { background-position: -117px 0px; }
+.race-1.unit-ct, .race-2.unit-ct { background-position: -156px 0px; }
+.race-1.unit-k1, .race-2.unit-k1 { background-position: -195px 0px; }
+.race-1.unit-k2, .race-2.unit-k2 { background-position: 0px -39px; }
+.race-1.unit-k3, .race-2.unit-k3 { background-position: -39px -39px; }
+.race-1.unit-ks, .race-2.unit-k4 { background-position: -78px -39px; }
+.race-1.unit-m1, .race-2.unit-k5 { background-position: -117px -39px; }
+.race-1.unit-m2, .race-2.unit-ks { background-position: -156px -39px; }
+.race-1.unit-m3, .race-2.unit-m1 { background-position: -195px -39px; }
+.race-1.unit-p1, .race-2.unit-m2 { background-position: 0px -78px; }
+.race-1.unit-p2, .race-2.unit-p1 { background-position: -39px -78px; }
+.race-1.unit-p3, .race-2.unit-p2 { background-position: -78px -78px; }
+.race-1.unit-s1, .race-2.unit-s1 { background-position: -117px -78px; }
+.race-1.unit-s2, .race-2.unit-s2 { background-position: -156px -78px; }
+.race-1.unit-s3, .race-2.unit-s3 { background-position: -195px -78px; }
+
+/* === BUILDINGS & RESEARCHES === */
+.price,
+.price img,
+.price.small-icon img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.price {
+    padding: 1px;
+    background: url("../images/prices/frames.png") no-repeat 50% 50%;
+}
+.price img {
+    background: url("../images/prices/40.png") no-repeat 100% 100%;
+}
+.price.small-icon img {
+    background: url("../images/prices/28.png") no-repeat 100% 100%;
+}
+.price.small-icon,
+.price.small-icon img {
+    width: 28px;
+    height: 28px;
+}
+/* Row 1 */
+.price-1 img { background-position: 0px 0px; }
+.price-2 img { background-position: -40px 0px; }
+.price-3 img { background-position: -80px 0px; }
+.price-4 img { background-position: -120px 0px; }
+.price-6 img { background-position: -160px 0px; }
+.price-7 img { background-position: -200px 0px; }
+/* Row 2 */
+.price-8 img { background-position: 0px -40px; }
+.price-9 img { background-position: -40px -40px; }
+.price-10 img { background-position: -80px -40px; }
+.price-12 img { background-position: -120px -40px; }
+.price-13 img { background-position: -160px -40px; }
+.price-14 img { background-position: -200px -40px; }
+/* Row 3 */
+.price-15 img { background-position: 0px -80px; }
+.price-16 img { background-position: -40px -80px; }
+.price-17 img { background-position: -80px -80px; }
+.price-18 img { background-position: -120px -80px; }
+.price-19 img { background-position: -160px -80px; }
+.price-20 img { background-position: -200px -80px; }
+/* Row 4 */
+.price-21 img { background-position: 0px -120px; }
+.price-22 img { background-position: -40px -120px; }
+.price-23 img { background-position: -80px -120px; }
+.price-24 img { background-position: -120px -120px; }
+.price-25 img { background-position: -160px -120px; }
+.price-26 img { background-position: -200px -120px; }
+/* Row 5 */
+.price-27 img { background-position: 0px -160px; }
+.price-28 img { background-position: -40px -160px; }
+.price-29 img { background-position: -80px -160px; }
+.price-30 img { background-position: -120px -160px; }
+.price-31 img { background-position: -160px -160px; }
+.price-32 img { background-position: -200px -160px; }
+/* Row 6 */
+.price-34 img { background-position: 0px -200px; }
+.price-35 img { background-position: -40px -200px; }
+.price-36 img { background-position: -80px -200px; }
+.price-37 img { background-position: -120px -200px; }
+.price-38 img { background-position: -160px -200px; }
+.price-39 img { background-position: -200px -200px; }
+/* Row 7 */
+.price-40 img { background-position: 0px -240px; }
+.price-41 img { background-position: -40px -240px; }
+.price-42 img { background-position: -80px -240px; }
+.price-43 img { background-position: -120px -240px; }
+.price-44 img { background-position: -160px -240px; }
+.price-45 img { background-position: -200px -240px; }
+/* Row 8 */
+.price-46 img { background-position: 0px -280px; }
+/* Administration */
+.price-ally-0 img { background-position: -40px -280px; }
+/* Defence */
+.price-ally-2 img { background-position: -80px -280px; }
+/* Production */
+.price-ally-3 img { background-position: -120px -280px; }
+/* Attack */
+.price-ally-1 img { background-position: -160px -280px; }
+/* Row 1 */
+.small-icon.price-1 img { background-position: 0px 0px; }
+.small-icon.price-2 img { background-position: -28px 0px; }
+.small-icon.price-3 img { background-position: -56px 0px; }
+.small-icon.price-4 img { background-position: -84px 0px; }
+.small-icon.price-6 img { background-position: -112px 0px; }
+.small-icon.price-7 img { background-position: -140px 0px; }
+/* Row 2 */
+.small-icon.price-8 img { background-position: 0px -28px; }
+.small-icon.price-9 img { background-position: -28px -28px; }
+.small-icon.price-10 img { background-position: -56px -28px; }
+.small-icon.price-12 img { background-position: -84px -28px; }
+.small-icon.price-13 img { background-position: -112px -28px; }
+.small-icon.price-14 img { background-position: -140px -28px; }
+/* Row 3 */
+.small-icon.price-15 img { background-position: 0px -56px; }
+.small-icon.price-16 img { background-position: -28px -56px; }
+.small-icon.price-17 img { background-position: -56px -56px; }
+.small-icon.price-18 img { background-position: -84px -56px; }
+.small-icon.price-19 img { background-position: -112px -56px; }
+.small-icon.price-20 img { background-position: -140px -56px; }
+/* Row 4 */
+.small-icon.price-21 img { background-position: 0px -84px; }
+.small-icon.price-22 img { background-position: -28px -84px; }
+.small-icon.price-23 img { background-position: -56px -84px; }
+.small-icon.price-24 img { background-position: -84px -84px; }
+.small-icon.price-25 img { background-position: -112px -84px; }
+.small-icon.price-26 img { background-position: -140px -84px; }
+/* Row 5 */
+.small-icon.price-27 img { background-position: 0px -112px; }
+.small-icon.price-28 img { background-position: -28px -112px; }
+.small-icon.price-29 img { background-position: -56px -112px; }
+.small-icon.price-30 img { background-position: -84px -112px; }
+.small-icon.price-31 img { background-position: -112px -112px; }
+.small-icon.price-32 img { background-position: -140px -112px; }
+/* Row 6 */
+.small-icon.price-34 img { background-position: 0px -140px; }
+.small-icon.price-35 img { background-position: -28px -140px; }
+.small-icon.price-36 img { background-position: -56px -140px; }
+.small-icon.price-37 img { background-position: -84px -140px; }
+.small-icon.price-38 img { background-position: -112px -140px; }
+.small-icon.price-39 img { background-position: -140px -140px; }
+/* Row 7 */
+.small-icon.price-40 img { background-position: 0px -168px; }
+.small-icon.price-41 img { background-position: -28px -168px; }
+.small-icon.price-42 img { background-position: -56px -168px; }
+.small-icon.price-43 img { background-position: -84px -168px; }
+.small-icon.price-44 img { background-position: -112px -168px; }
+.small-icon.price-45 img { background-position: -140px -168px; }
+/* Row 8 */
+.small-icon.price-46 img { background-position: 0px -196px; }
+/* Administration */
+.small-icon.price-ally-0 img { background-position: -28px -196px;}
+/* Defence */
+.small-icon.price-ally-2 img { background-position: -56px -196px; }
+/* Production */
+.small-icon.price-ally-3 img { background-position: -84px -196px; }
+/* attack */
+.small-icon.price-ally-1 img { background-position: -112px -196px; }
+
+#realm-wars {
+    position: absolute;
+        right: 93px;
+        top: 22px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../gui/menu.png?10") no-repeat -138px -108px;
+}
+.subtabs {
+    border-bottom: 1px solid #494232;
+    line-height: 1.214em;
+}
+.subtabs, .fake-subtabs {
+    margin-bottom: 1em;
+    padding-bottom: 3px;
+    color: #494232;
+    text-align: center;
+}
+.subtabs a,
+.fake-subtabs a {
+    padding: 3px 7px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.subtabs a:hover, .fake-subtabs a:hover     { border-bottom: 3px solid #000B77; }
+.subtabs a.active, .fake-subtabs a.active   { border-bottom: 3px solid #393020; }
+.gift-opened {
+    width: 130px;
+    height: 145px;
+}
+h5 img {
+    vertical-align: bottom;
+}
+
+/* === UNITS CARDS === */
+.unit-card {
+    width: 600px;
+}
+.unit-card,
+.unit-card td {
+    color: #4C2E14;
+}
+.unit-card-icon {
+    display: block;
+    width: 272px;
+    height: 312px;
+}
+.unit-card-details {
+    margin-bottom: 1em;
+}
+.unit-card-details table {
+    width: 310px;
+    border: 1px solid #9D8765;
+    border-radius: 6px;
+    background-color: #B5A481;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.unit-card-details td {
+    height: 31px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #9D8765;
+}
+.unit-card-details td img {
+    width: 18px;
+    height: 18px;
+    margin: 2px 1px 0px;
+}
+.unit-card-details tr:last-child td {
+    border-bottom: none;
+}
+.unit-card-description {
+    border: 1px solid #9D8765;
+    border-radius: 6px;
+    padding: 1em;
+}
+.unit-card-description h1 {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* === PRICES CARDS === */
+.price-card {
+    width: 425px;
+}
+.price-card-icon,
+.price-card-icon img {
+    width: 140px;
+    height: 140px;
+}
+.price-card-icon {
+    float: left;
+    margin-right: 1em;
+    padding: 3px;
+    font-size: 0.857em;
+    background: url("../images/prices/frames.png") no-repeat 50% 50%;
+}
+
+/* === NEWS ITEM === */
+.news-item {
+    margin-bottom: 1.5em;
+}
+.news-item h1 {
+    font-size: 1em;
+}
+.news-item h1 span {
+    display: block;
+    font-size: 0.85em;
+    font-weight: normal;
+}
+.news-item .mark-as-read a {
+    float: right;
+    display: block;
+}
+
+/* === MEDALS IN USERS STATS === */
+.ranking-medal {
+    width: 20px;
+    height: 20px;
+    background: url("../gui/medals/ranking-medals.png?v7") no-repeat 0px 0px;
+}
+.ranking-medal.worldcup-contestant  { background-position: -40px 0px; }
+.ranking-medal.worldcup-reporter    { background-position: -20px 0px; }
+.ranking-medal.worldcup-winner-1    { background-position: 0px -20px; }
+.ranking-medal.worldcup-winner-2    { background-position: -20px -20px; }
+.ranking-medal.worldcup-winner-3    { background-position: -40px -20px; }
+.ranking-medal.endgame-winner-1     { background-position: 0px -40px; }
+.ranking-medal.endgame-winner-2     { background-position: -20px -40px; }
+.ranking-medal.endgame-winner-3     { background-position: -40px -40px; }
+.ranking-medal.endgame-winner-wonders-1 { background-position: 0px -60px; }
+.ranking-medal.battles-day-won-1    { background-position: -60px 0px; }
+.ranking-medal.battles-day-won-2    { background-position: -60px -20px; }
+.ranking-medal.battles-day-won-3    { background-position: -60px -40px; }
+.ranking-medal.battles-day-won-4    {  background-position: -60px -60px; }
+.ranking-medal.battles-day-inactive {  background-position: -20px -100px; }
+.ranking-medal.champs-contestant    { background-position: -20px -60px; }
+.ranking-medal.champs-reporter      { background-position: -40px -60px; }
+.ranking-medal.champs-winner-1      { background-position: 0px -80px; }
+.ranking-medal.champs-winner-2      { background-position: -20px -80px;}
+.ranking-medal.champs-winner-3      { background-position: -40px -80px; }
+.ranking-medal.champs-inactive      { background-position: 0px -100px; }
+.ranking-medal.world-cup-final-stage { background-position: -40px -100px; }
+.ranking-medal.ni-1 { background-position: 0px -120px; }
+.ranking-medal.ni-2 { background-position: -20px -120px; }
+.ranking-medal.ni-3 { background-position: -40px -120px; }
+.ranking-medal.ni-s { background-position: -60px -120px; }
+.ranking-medal.cc-1 { background-position: -80px 0px; }
+.ranking-medal.cc-2 { background-position: -80px -20px; }
+.ranking-medal.cc-3 { background-position: -80px -60px; }
+.ranking-medal.cc-s { background-position: -80px -80px; }
+.ranking-medal.donnor-2015-1  { background-position: 0px -140px; }
+.ranking-medal.donnor-2015-2  { background-position: -20px -140px; }
+.ranking-medal.donnor-2015-3  { background-position: -40px -140px; }
+.ranking-medal.donnor-2015-4  { background-position: -60px -140px; }
+.ranking-medal.donnor-2015-5  { background-position: -80px -140px; }
+
+/* === PROFILE MEDALS === */
+.tournaments-profile-medals {
+    margin-top: 1em;
+}
+.tournaments-profile-medals img {
+    width: 90px;
+    height: 90px;
+}
+
+/* === BATTLES OF THE DAY MEDALS === */
+.medal-1,
+.medal-2,
+.medal-3,
+.medal-4 {
+    width: 24px;
+    height: 24px;
+    background: url("../gui/medals.png") no-repeat 50% 0px;
+}
+.medal-2     { background-position: 50% 33.333%; }
+.medal-3    { background-position: 50% 66.666%; }
+.medal-4   { background-position: 50% 100%; }
+
+/* === TEMPLE === */
+.temple-gifts {
+    position: relative;
+    width: 528px;
+    height: 381px;
+    overflow: hidden;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    background: url("../gui/ajax/v2/temple/bg.jpg") no-repeat 0px 0px;
+}
+.temple-header {
+    position: absolute;
+        top: 10px;
+        left: 62px;
+    width: 405px;
+    height: 50px;
+}
+.temple-header th,
+.temple-header td {
+    vertical-align: middle;
+}
+.temple-header th {
+    width: 48px;
+    text-align: center;
+}
+.temple-day-label {
+    font-weight: bold;
+}
+.temple-day-label li,
+.temple-gift-cascade li,
+.temple-footer,
+.temple-footer form,
+.temple-footer .ressource-diamond {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+}
+.temple-day-label li,
+.temple-gift-cascade li {
+    text-align: center;
+}
+.temple-day-label li {
+    width: 80px;
+    height: 42px;
+    line-height: 45px;
+    padding-left: 47px;
+}
+.temple-day-label .yesterday {
+    top: 81px;
+    left: 22px;
+}
+.yesterday img {
+    position: absolute;
+       top: 0;
+       left: 1px;
+    width: 40px;
+    height: 40px;
+}
+.temple-day-label .tomorrow {
+    top: 102px;
+    right: 20px;
+}
+.temple-gift-cascade {
+    text-align: center;
+}
+.temple-gift-cascade .chest,
+.temple-gift-cascade li {
+    width: 119px;
+    height: 136px;
+}
+.temple-gift-cascade img {
+    width: 105px;
+    display: block;
+    margin: auto auto .214em auto;
+}
+.temple-gift-cascade li,
+.temple-footer {
+    background:transparent url("../gui/ajax/v2/temple/cards.png") no-repeat 0px 0px ;
+}
+.temple-gift-cascade li {
+    padding: 9px 11px 31px 9px;
+}
+.temple-gift-cascade .chest,
+.temple-gift-cascade img {
+    padding: 0;
+    background: #FFF url("../gui/ajax/v2/temple/chests.jpg?3") no-repeat  0px 0px;
+}
+.temple-gift-cascade .chest-1 { background-position: 0px 0px; }
+.temple-gift-cascade .chest-2 { background-position: -118px 0px; }
+.temple-gift-cascade .chest-3 { background-position: -236px 0px; }
+.temple-gift-cascade .chest-4 { background-position: -354px 0px; }
+.temple-gift-cascade .chest-5 { background-position: -472px 0px; }
+.temple-gift-cascade .chest-6 { background-position: -590px 0px; }
+.temple-gift-cascade .chest-1.chest-open { background-position: 0px 100%;}
+.temple-gift-cascade .chest-2.chest-open { background-position: -118px 100%; }
+.temple-gift-cascade .chest-3.chest-open { background-position: -236px 100%; }
+.temple-gift-cascade .chest-4.chest-open { background-position: -354px 100%; }
+.temple-gift-cascade .chest-5.chest-open { background-position: -472px 100%; }
+.temple-gift-cascade .chest-6.chest-open { background-position: -590px 100%; }
+.temple-gift-cascade .temple-gift-1 {
+    bottom: 44px;
+    right: 140px;
+    z-index: 120;
+}
+.temple-gift-cascade .temple-gift-2 {
+    bottom: 64px;
+    right: 160px;
+    z-index: 140;
+}
+.temple-gift-cascade .temple-gift-3 {
+    bottom: 84px;
+    right: 180px;
+    z-index: 180;
+}
+.temple-gift-cascade .temple-gift-4 {
+    bottom: 104px;
+    right: 200px;
+    z-index: 200;
+}
+.temple-gift-cascade .temple-gift-5 {
+    bottom: 124px;
+    right: 220px;
+    z-index: 220;
+}
+.temple-gift-cascade .temple-gift-last {
+        left: 30px;
+        bottom: 7px;
+        z-index: 240;
+    padding: 9px 31px 11px 9px;
+    background-position: -139px 0px;
+}
+.temple-footer {
+        bottom: 7px;
+        left: 160px;
+        z-index: 170;
+    width: 288px;
+    height: 32px;
+    padding: 13px 10px 13px 10px;
+    background-position: 0px -176px;
+}
+.temple-footer.no-price {
+    width: 150px;
+    background-position: -138px -176px;
+}
+.temple-footer .button {
+    position: relative;
+        top: 3px;
+        left: 14px;
+        z-index: 140;
+}
+.temple-footer .ressource-diamond {
+    top: 14px;
+    right: 20px;
+}
+.temple-what-to-expect {
+    width: 230px;
+    margin: 1em 0em 0em -0.2em;
+}
+.temple-what-to-expect li {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0.2em;
+}
+
+.move-army-fortress {
+    width: 150px;
+    margin: auto;
+}
+.move-army-fortress input {
+    float: left;
+    margin: 5px;
+}
+.game-end {
+    position: relative;
+       top: 224px;
+       left: 96px;
+    width: 500px;
+}
+.game-end,
+.game-end a {
+    color: #FFF;
+}
+.game-end table a {
+    color: #000;
+}
+.game-end.winner {
+    top: 112px;
+}
+.game-end.system {
+    vertical-align: middle;
+}
+.more {
+    margin-top: 1em;
+}
+.ally-position-title {
+    font-size: 0.75em;
+    line-height: 1.8em;
+}
+.stats-nominated-row td {
+    color: #D00;
+}
+.handleDeselected .header       { background-position: 0px -83px; }
+.handleDeselected .header span  { background-position: -7px -55px; }
+.handleDeselected .header em    { background-position: 0px -55px; }
+.handleDeselected .header div {
+    color: silver;
+}
+.header {
+    position: relative;
+        z-index: 2;
+    margin: 0px 7px 0px;
+    padding: 0px 21px 0px 0px;
+    font-size: 1em;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid #180A05;
+    background: #863718 url("../gui/ajax/v2/window-sprite.png?2") repeat-x 0px -28px ;
+}
+.header div {
+    text-overflow: ellipsis;
+}
+.header,
+.header span,
+.header em,
+.header div {
+    line-height: 27px;
+    height: 27px;
+}
+.header > span,
+.header > em {
+    position: absolute;
+       top: 0;
+    display: block;
+    width: 7px;
+    padding-bottom: 1px;
+    background-image: url("../gui/ajax/v2/window-sprite.png?2");
+    background-repeat: no-repeat;
+}
+.header a {
+    position: absolute;
+        top: 5px;
+        z-index: 3;
+    display: block;
+    width: 18px;
+    height: 18px;
+    outline: none;
+}
+.header .closeAjaxWindow {
+        right: 0;
+    background: url("../gui/ajax/v2/window-sprite.png?2") no-repeat 2px -110px;
+}
+.header .giveFeedback {
+        left: 5px;
+    background: url("../gui/ajax/v2/window-sprite.png?2") no-repeat 2px -174px;
+}
+.header span {
+        left: -7px;
+    background-position: 100% 0px;
+}
+.header em {
+        right: -7px;
+    background-position: 0px 0px;
+}
+.header a.closeAjaxWindow:hover             { background-position: 2px -126px; }
+.handleDeselected .header a.closeAjaxWindow { background-position: 2px -142px; }
+.handleDeselected .header a.closeAjaxWindow:hover   { background-position: 2px -158px; }
+.header a.giveFeedback:hover                        { background-position: 2px -190px; }
+.handleDeselected .header a.giveFeedback            { background-position: 2px -206px; }
+.handleDeselected .header a.giveFeedback:hover      { background-position: 2px -222px; }
+.header.feedback-active {
+    padding-right: 40px;
+}
+
+/* === PROVINCE PAGING === */
+.dragme a {
+    position: relative;
+        top: 4px;
+    display: inline-block;
+    background: url("../gui/ajax/v2/window-sprite.png?2") no-repeat 2px -238px;
+    color: transparent;
+}
+.prov-prev a:hover                      { background-position: 2px -254px; }
+.handleDeselected .prov-prev a          { background-position: 2px -270px; }
+.handleDeselected .prov-prev a:hover    { background-position: 2px -286px; }
+.prov-next a                            { background-position: 2px -302px; }
+.prov-next a:hover                      { background-position: 2px -318px; }
+.handleDeselected .prov-next a          { background-position: 2px -334px; }
+.handleDeselected .prov-next a:hover    { background-position: 2px -350px; }
+.dragme a,
+.dragme ins {
+    text-decoration: none;
+}
+
+/* === FEEDBACK === */
+.feedback_window {
+    display: block;
+    width: 400px;
+    margin: 10px;
+}
+#send_feedback a {
+    background: url("../gui/ajax/v2/feedback-emoticons.png") no-repeat 0px 0px;
+    display: block;
+    height: 30px;
+    width: 47px;
+    outline: none;
+}
+#send_feedback .giveFeedbackNegativeActive  { background-position: 0px 20%; }
+#send_feedback .giveFeedbackNeutral         { background-position: 0px 40%; }
+#send_feedback .giveFeedbackNeutralActive   { background-position: 0px 60%; }
+#send_feedback .giveFeedbackPositive        { background-position: 0px 80%; }
+#send_feedback .giveFeedbackPositiveActive  { background-position: 0px 100%; }
+#send_feedback td {
+    vertical-align: middle;
+}
+#send_feedback .send_feedback_emoticon_column {
+    width: 50px;
+    text-align: center;
+}
+#send_feedback .send_feedback_opinion_text_column {
+    width: 115px;
+    padding-left: 5px;
+    text-align: left;
+}
+#send_feedback .feedback_textarea_inactive {
+    color: gray;
+}
+#send_feedback .send_feedback_btn_column {
+    text-align: center;
+}
+.corner-left,
+.corner-right,
+.corner-bottom-yeah {
+    height: 7px;
+}
+.corner-left,
+.corner-right,
+.side-left,
+.side-right {
+    width: 7px;
+}
+.corner-left,
+.corner-right {
+    background: url("../gui/ajax/v2/window-sprite.png?2") no-repeat 0px 100%;
+}
+.corner-left {
+    background-position: 100% 100%;
+}
+.side-left,
+.side-right,
+.corner-bottom-yeah {
+    background-image: url("../gui/ajax/v2/sides.png");
+}
+.corner-bottom-yeah {
+    height: 7px;
+    background-position: 0px 4px;
+    background-repeat: repeat-x;
+    background-color: #C3B18B;
+        background-size: 11px auto; /* FF 17,18 scaling fix */
+}
+.side-left {
+    background-position: 0px -19px;
+}
+.ajax-v2-container.untabbed .side-left,
+.ajax-v2-container.fullwidth .side-left {
+    background-position: 0px -55px;
+}
+.side-right {
+    background-position: 100% -19px;
+}
+.ajax-v2-container.untabbed .side-right,
+.ajax-v2-container.fullwidth .side-right {
+    background-position: 100% -55px;
+}
+.messageboxClass {
+    position: relative;
+        z-index: 1;
+    min-height: 5em;
+    min-width: 10em;
+    background-color: #65573C;
+}
+.shadow-top-right,
+.shadow-bottom-left,
+.shadow-bottom-right {
+    width: 20px;
+    height: 20px;
+    background: url("../gui/ajax/v2/shadows.png") no-repeat 100% 100%;
+}
+.shadow-top-right {
+    height: auto;
+    background-position: 100% 5px;
+}
+.shadow-bottom-left {
+    float: left;
+    width: 16px;
+    background-position: 0px 100%;
+}
+.shadow-right {
+    background: url("../gui/ajax/v2/shadow-right.png") repeat-y 0px 0px;
+}
+.shadow-bottom {
+    background: url("../gui/ajax/v2/shadow-bottom.png") repeat-x 0px 0px;
+    height: 20px;
+    margin-left: 16px;
+}
+.upgrading-level,
+.pasive {
+    color: #0D1AFF;
+}
+.tabstrip-content h4 {
+    clear: both;
+    line-height: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+.tabstrip-content h5,
+.tabstrip-content h6 {
+    line-height: normal;
+    font-size: 1em;
+    text-align: center;
+}
+.tabstrip-content h6 {
+    margin-bottom: 0.25em;
+    font-weight: normal;
+    text-align: left;
+}
+.tabstrip-content textarea {
+    width: 600px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.ajax-v2-container {
+    width: 100%;
+}
+.untabbed .tabstrip-content,
+.fullwidth .tabstrip-content {
+    border-top: none;
+}
+#upload-avatar {
+    display: block;
+    width: 800px;
+    height: 450px;
+}
+.ally-relations {
+    width: 150px;
+    margin: auto;
+}
+.ally-relations fieldset {
+    float: left;
+    text-align: center;
+    margin: 0px 2px;
+}
+.ally-relations fieldset,
+.alliance-cv fieldset {
+    padding: 0;
+    border: none
+}
+.ally-relations label {
+    display: block;
+}
+.ally-relations-0 {
+    color: #00F;
+}
+.ally-relations-1 {
+    color: #0070FF;
+}
+.ally-relations-3 {
+    color: #FF7000;
+}
+.ally-relations-4 {
+    color: #F00;
+}
+.ally-relations-list-0,
+.ally-relations-list-1,
+.ally-relations-list-2,
+.ally-relations-list-3 {
+    width: auto;
+}
+.ally-relations-list-4 .ally-relations-4 {
+    float: left;
+}
+.trade-grid th {
+    white-space: normal;
+}
+.vassal {
+    background-color: #A4AE87;
+}
+.rtl-float-left {
+    float: left;
+}
+.rtl-float-right {
+    float: right;
+}
+.pager {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.trade-chart-wrapper {
+    width: 460px;
+    margin: 1em auto auto;
+    padding: 10px 0px;
+    border: 1px solid #784016;
+    background-color: #F8F8D8;
+}
+.trade-chart-wrapper object {
+    width: 450px;
+    margin-left: auto;
+}
+
+/* === ALLIANCE POSITIONS === */
+.alliance-position {
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    background: url("../gui/actions.png?2") 0px 0px no-repeat;
+}
+.position-leader            { background-position: 0px 0px; }
+.position-1-experience-1    { background-position: 0px -26px; }
+.position-1-experience-2    { background-position: -26px -26px; }
+.position-1-experience-3    { background-position: -52px -26px; }
+.position-2-experience-1    { background-position: 0px -52px; }
+.position-2-experience-2    { background-position: -26px -52px; }
+.position-2-experience-3    { background-position: -52px -52px; }
+.position-3-experience-1    { background-position: 0px -78px; }
+.position-3-experience-2    { background-position: -26px -78px; }
+.position-3-experience-3    { background-position: -52px -78px; }
+.position-4-experience-1    { background-position: 0px -104px; }
+.position-4-experience-2    { background-position: -26px -104px; }
+.position-4-experience-3    { background-position: -52px -104px; }
+.position-5-experience-1    { background-position: 0px -130px; }
+.position-5-experience-2    { background-position: -26px -130px; }
+.position-5-experience-3    { background-position: -52px -130px; }
+.position-6-experience-1    { background-position: 0px -156px; }
+.position-6-experience-2    { background-position: -26px -156px; }
+.position-6-experience-3    { background-position: -52px -156px; }
+.position-0-experience-1    { background-position: 0px -182px; }
+.position-0-experience-2    { background-position: -26px -182px; }
+.position-0-experience-3    { background-position: -52px -182px; }
+
+.price_constructions form table {
+    width: 300px;
+    margin: auto;
+}
+
+/* === ACHIEVEMENTS === */
+#achievment-groups {
+    margin-bottom: 1em;
+}
+#achievment-subgroups {
+    width: 150px;
+}
+#achievment-groups a,
+#achievment-groups div,
+#achievment-subgroups a,
+#achievement-details {
+    border-style: solid;
+}
+#achievement-details,
+#achievment-groups a.active,
+#achievment-subgroups a.active {
+    border-color: #000;
+}
+#achievment-subgroups a {
+    position: relative;
+    color: #020202;
+    text-decoration: none;
+    border-width: 1px 0px 1px 1px;
+    border-color: transparent;
+}
+#achievment-groups a,
+#achievment-groups div {
+    margin: 1px;
+    border-width: 1px;
+    border-color: #C3B18B;
+}
+#achievment-subgroups a,
+#achievment-subgroups div,
+#achievement-details {
+    padding: 0.5em;
+}
+#achievment-subgroups a.done {
+    color: #215D35;
+}
+#achievment-subgroups div {
+    color: gray;
+}
+#achievment-groups a,
+#achievment-groups div {
+    padding: 0.5em;
+}
+#achievment-groups a,
+#achievment-groups a span,
+#achievment-groups div span,
+#achievment-subgroups a {
+    display: block;
+}
+#achievment-groups a,
+#achievment-groups div {
+    width: 32px;
+    height: 32px;
+}
+#achievment-groups a span,
+#achievment-groups div span {
+    width: 32px;
+    height: 32px;
+    margin: auto;
+    background: url("../gui/achievement-groups.png") no-repeat 0px 0px;
+}
+#achievment-groups #group-2 span            { background-position: 0px -32px; }
+#achievment-groups #group-9 span            { background-position: 0px -64px; }
+#achievment-groups #group-12 span           { background-position: 0px -96px; }
+#achievment-groups #group-18 span           { background-position: 0px -128px; }
+#achievment-groups #group-21 span           { background-position: 0px -160px; }
+#achievment-groups #group-30 span           { background-position: 0px -192px; }
+#achievment-groups #group-34 span           { background-position: 0px -224px; }
+#achievment-groups #group-36 span           { background-position: 0px -256px; }
+#achievment-groups #group-35 span           { background-position: 0px -288px; }
+#achievment-groups #group-1.done span       { background-position: -32px 0px; }
+#achievment-groups #group-2.done span       { background-position: -32px -32px; }
+#achievment-groups #group-9.done span       { background-position: -32px -64px; }
+#achievment-groups #group-12.done span      { background-position: -32px -96px; }
+#achievment-groups #group-18.done span      { background-position: -32px -128px; }
+#achievment-groups #group-21.done span      { background-position: -32px -160px; }
+#achievment-groups #group-30.done span      { background-position: -32px -192px; }
+#achievment-groups #group-34.done span      { background-position: -32px -224px; }
+#achievment-groups #group-36.done span      { background-position: -32px -256px; }
+#achievment-groups #group-35.done span      { background-position: -32px -288px; }
+#achievment-groups #group-1.inactive span   { background-position: -64px 0px; }
+#achievment-groups #group-2.inactive span   { background-position: -64px -32px; }
+#achievment-groups #group-9.inactive span   { background-position: -64px -64px; }
+#achievment-groups #group-12.inactive span  { background-position: -64px -96px; }
+#achievment-groups #group-18.inactive span  { background-position: -64px -128px; }
+#achievment-groups #group-21.inactive span  { background-position: -64px -160px; }
+#achievment-groups #group-30.inactive span  { background-position: -64px -192px; }
+#achievment-groups #group-34.inactive span  { background-position: -64px -224px; }
+#achievment-groups #group-36.inactive span  { background-position: -64px -256px; }
+#achievment-groups #group-35.inactive span  { background-position: -64px -288px; }
+#achievment-groups a.active {
+    background-color: #C6A061;
+}
+#achievment-subgroups a.active,
+#achievment-subgroups a.active span,
+#achievement-details {
+    background-color: #CCC0A0;
+    margin-right: -1px;
+}
+#achievment-subgroups a span {
+    display: none;
+}
+#achievment-subgroups a.active span {
+    position: absolute;
+        right: -2px;
+        top: 0;
+    display: block;
+    padding: 0.5em 0em;
+    width: 3px;
+    overflow: hidden;
+}
+#achievement-details {
+    width: 550px;
+    border-width: 1px;
+    padding: 20px;
+}
+#achievement-details .notice-wrapper {
+    margin-bottom: 30px;
+}
+#achievement-description {
+    overflow: visible;
+}
+#achievement-description img {
+    float: left;
+    width: 184px;
+    height: 184px;
+    margin: -12px 14px 0px -15px;
+}
+#achievement-description h5 {
+    text-align: left;
+}
+#achievement-reward { line-height: 32px; }
+#achievement-reward div {
+    display: inline-block;
+    margin-left: 0.2em;
+}
+
+/* === PROGRESS BAR === */
+.progress-bar,
+.progress-bar b,
+.progress-bar em {
+    display: block;
+    width: 140px;
+    height: 14px;
+    line-height: 14px;
+    font-style: normal;
+    font-weight: normal;
+    background: url("../gui/ajax/v2/progress.png?a") no-repeat 0px 0px;
+}
+.progress-bar {
+    position: relative;
+    margin: 0.714em auto auto;
+    text-align: center;
+}
+.progress-bar b,
+.progress-bar em {
+    position: absolute;
+        top: 0;
+        left: 0;
+}
+.progress-bar b {
+    overflow: hidden;
+    background-position: 0px -14px;
+}
+.progress-bar em {
+       top: -1.2em;
+    height: auto;
+    line-height: normal;
+    background: none;
+}
+.stopped em {
+    color: #777;
+}
+.progress-bar.stopped {     background-position: 0px -28px; }
+.progress-bar.stopped b {   background-position: 0px -42px; }
+
+/* === CASINO === */
+#casino-loby {
+    margin-bottom: 1em;
+}
+#casino-loby a,
+#casino-loby a span {
+    display: block;
+    text-align: center;
+}
+#casino-loby a {
+    padding: 2px;
+}
+#casino-loby div,
+#casino-loby a span {
+    width: 140px;
+    margin: auto;
+    padding-top: 100px;
+    background: url("../images/casino/games.jpg") no-repeat 0px 0px;
+}
+#casino-loby div {
+    margin: 2px;
+}
+#casino-rule div, #casino-rule a span { background-position: -140px 0px !important; }
+#casino-jack div, #casino-jack a span { background-position: -280px 0px; }
+#casino-blck div, #casino-blck a span { background-position: -420px 0px; }
+
+.resource-40 {
+    background: transparent url("../gui/ajax/v2/resources/40.png") no-repeat 0px 0px ;
+}
+.temple-gifts .resource-40.resource-wood { background-position: -39px 0px; }
+.resource-40.resource-iron              { background-position: -78px 0px; }
+.resource-40.resource-stone             { background-position: -117px 0px; }
+.resource-40.resource-gold              { background-position: -156px 0px; }
+.resource-40.resource-diamond           { background-position: -195px 0px; }
+.resource-40.resource-empty             { background-position: -234px 0px; }
+.resource-40.resource-empty-off         { background-position: -234px -40px; }
+.resource-40.resource-happiness         { background-position: -273px 0px; }
+.resource-40.resource-happiness-off     { background-position: -273px -40px; }
+#WzTtDiV table {
+    width: 100% !important;
+}
+.stats-icon-race {
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    margin: 0px auto;
+    background: url("../gui/stats-icons-sprite.png");
+}
+    .stats-icon-race.race2 {
+        background-position: -19px 0px;
+    }
+.table-v2 {
+    width: 100%;
+    border-top: 1px solid #927358;
+    border-bottom: 1px solid #DCC79D;
+}
+    .table-v2 th {
+        height: 36px;
+        text-align: center !important;
+        background: #49160B url("../gui/table-v2-tbg.png") no-repeat left bottom;
+    }
+    .table-v2 th:first-child {
+        background: #49160B;
+    }
+    .table-v2 td {
+        line-height: 36px;
+        padding: 0px 20px;
+        color: #000;
+        text-align: right;
+        vertical-align: middle;
+        background: #E3CEA2 url("../gui/table-v2-bbg.png") repeat-y;
+    }
+    .table-v2 tr:hover td,
+    .table-v2 tr.current td {
+        background-color: #D3BB93 !important;
+    }
+    .table-v2 td:first-child {
+        background: #E3CEA2;
+    }
+        .table-v2 tr.stripe td {
+            background-color: #E7D2A5;
+        }
+.input-v2 {
+    height: 26px;
+    line-height: 26px;
+    margin: 0px;
+    padding: 0px 5px;
+    font-size: 12px;
+    border: 1px solid #A1A1A1;
+    outline: none;
+}
+.button-v3 {
+    height: 28px;
+    line-height: 28px;
+    vertical-align: top;
+    border: 0px;
+    background-color: #49160B;
+    cursor: pointer;
+}
+    .button-v3.search {
+        width: 27px;
+        background: #49160B url("../images/icons/search.png") no-repeat center;
+    }
+
+/* === TABLE v3 === */
+.table-v3 {
+    width: 100%;
+}
+    .table-v3 th,
+    .table-v3 td {
+        padding: 0px 15px;
+        vertical-align: middle;
+        color: #48160B;
+        border-right: 1px solid #BEA883;
+    }
+    .table-v3 th:first-child,
+    .table-v3 td:first-child {
+        border-left: 1px solid #BEA883;
+    }
+    .table-v3 th {
+        line-height: 25px;
+        text-align: center;
+        border-top: 1px solid #B2A382;
+        background-color: #D2C4A1;
+    }
+    .table-v3 td {
+        line-height: 38px;
+        text-align: right;
+        background-color: #FBECC3;
+    }
+    .table-v3 table td { background-color: transparent; }
+        table th.left,
+        table td.left { text-align: left !important; }
+        table th.center,
+        table td.center { text-align: center !important; }
+        table th.right,
+        table td.right { text-align: right !important; }
+    .table-v3 tr.stripe > td  { background-color: #EDDFB8; }
+    .table-v3 tr:hover > td   { background-color: #DFD2AD; }
+    .table-v3 tr:last-child > td,
+    .table-v3 tr:last-child > th { border-bottom: 1px solid #BEA883; }
+    .table-v3 tr:last-child > th { border-top-width: 0px; }
+
+    table.radius-bottom,
+    table.radius-top {
+        border-collapse: separate;
+    }
+    table.radius-bottom tr:last-child > th:first-child,
+    table.radius-bottom tr:last-child > td:first-child {
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-bottomleft: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    table.radius-bottom tr:last-child > th:last-child,
+    table.radius-bottom tr:last-child > td:last-child {
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-radius-bottomright: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    table.radius-top tr:first-child > th:first-child,
+    table.radius-top tr:first-child > td:first-child {
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+        border-top-left-radius: 5px;
+    }
+    table.radius-top tr:first-child > th:last-child,
+    table.radius-top tr:first-child > td:last-child {
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topright: 5px;
+        border-top-right-radius: 5px;
+    }
+.table-v3 .subtable {
+    width: 100%;
+}
+    .table-v3 .subtable > td,
+    .table-v3 .subtable > td:hover {
+        line-height: normal;
+        padding: 20px 25px 10px 25px;
+        background: #CFC2A0 url("../gui/table-v3.png") repeat-x left -58px;
+        border-bottom: 1px solid #A99877;
+    }
+    .table-v3 .subtable table {
+        width: 100%;
+        border-top: 1px solid #9E8F70;
+    }
+    .table-v3 .subtable table th {
+        background-color: #CBBD9A;
+    }
+    .table-v3 .subtable table td {
+        background-color: #F0E2BB;
+    }
+    .table-v3 .subtable table tr:hover td,
+    .table-v3 .subtable table tr.stripe td {
+        background-color: #DCCFAC;
+    }
+    .table-v3 .subtable table th,
+    .table-v3 .subtable table td,
+    .table-v3 .subtable table th:first-child,
+    .table-v3 .subtable table td:first-child {
+        border-color: #9E8F70;
+    }
+    .table-v3 .subtable tr:last-child td.nav {
+        border-bottom: none;
+    }
+
+    .table-v3 a {
+        color: #386083;
+        text-decoration: underline;
+    }
+        .table-v3 a:hover {
+            text-decoration: none;
+        }
+/* icon terains v2*/
+.icon-terain {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    background: url("../gui/icon_terains.png") no-repeat;
+}
+.icon-terain.terain0 { background-position: 0px 0px; }
+.icon-terain.terain1 { background-position: -25px 0px; }
+.icon-terain.terain2 { background-position: -50px 0px; }
+.icon-terain.terain3 { background-position: -75px 0px; }
+.icon-terain.terain4 { background-position: -100px 0px; }
+.icon-terain.terain5 { background-position: -125px 0px; }
+.icon-terain.terain6 { background-position: -150px 0px; }
+.icon-terain.province {
+    width: 40px;
+    height: 32px;
+    background-position: 0px -25px;
+}
+.icon-terain.colonies {
+    width: 32px;
+    height: 32px;
+    background-position: -41px -25px;
+}
+
+/* not available image */
+.not-available {
+    display: inline !important;
+    width: 23px;
+    height: 23px;
+    vertical-align: bottom;
+    background: url('../images/not-available.png') 50% 0 no-repeat;
+}
+
+a .not-available {
+    width: 27px;
+    height: 27px;
+    background-position: 50% 100%;
+}
+
+.slider-tabela .not-available {
+    position: absolute;
+        bottom: 15px;
+        left: -200px;
+}
+
+.wonders-footer .not-available {
+    position: absolute;
+        bottom: 12px;
+        left: 90px;
+}

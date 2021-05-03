@@ -1,0 +1,111 @@
+.window-micro {
+    width: 470px;
+}
+.window-micro .content {
+    padding: 35px;
+}
+.avatar-upload .f-container {
+    padding: 0;
+}
+.avatar-upload .hidden-controllers {
+    display: none;
+}
+.decorated-container {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-avatar-frame {
+    position: relative;
+    width: 194px;
+    height: 500px;
+    margin: 12px 30px 0 12px;
+}
+
+.avatar-steps {
+    height: 1px;
+    line-height: 1px;
+    margin: 10px 0 20px;
+    padding: 0 10px;
+    border-top: 1px solid #81745C;
+}
+.avatar-steps .step {
+    width: 11px;
+    height: 11px;
+    margin: -6px 15px 0;
+    background: #928870;
+    border: 1px solid #81745C;
+    border-radius: 6px;
+}
+.avatar-steps .step.active {
+    background: #23989f;
+    border-color: #155C60;
+    box-shadow: inset 0 0 3px #155C60;
+}
+
+.upload-avatar-image {
+    height: 80px;
+    padding-top: 120px;
+    background: url("../images/upload_avatar/avatar_upload.png") no-repeat top center;
+}
+
+.preview-new-avatar .profile-avatar-frame {
+    height: 320px;
+    margin: 0 auto;
+}
+.preview-new-avatar .frame {
+    z-index: 3;
+}
+.preview-new-avatar #user-avatar {
+    position: absolute;
+    left: 16px;
+    top: 32px;
+    width: 165px;
+    height: 165px;
+    z-index: 1;
+}
+
+#efects-container {
+    display: none;
+}
+
+.upload-avatar-canvas {
+    background-color: rgba(109, 94, 73, 0.2);
+    border: 2px solid #897d65;
+    border-radius: 5px;
+    text-align: center;
+}
+.upload-avatar-canvas .jcrop-holder {
+    display: inline-block !important;
+}
+
+.upload-avatar-effects {
+    padding: 10px;
+}
+.upload-avatar-effects .effect {
+    width: 45px;
+    height: 45px;
+    margin: 0 3px;
+    border: 1px solid #585041;
+    cursor: pointer;
+}
+.upload-avatar-effects .effect.active {
+    border-color: #F1CC63;
+}
+
+.upload-avatar-footer {
+    padding-top: 20px;
+}
+
+.upload-steps p {
+    padding: 10px;
+    text-align: center;
+}
+.navigation-holder .arrow-back,
+.upload-avatar-footer .arrow-back {
+    position: absolute;
+    left: 35px;
+    color: #705C43;
+}
